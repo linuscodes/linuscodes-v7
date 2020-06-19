@@ -344,20 +344,21 @@ header .button-group .btn:not(:last-child) {
 
 .project-list ul li .content {
    height: 100%;
-   background: #fbfbfb;
-   border-radius: 10px;
+   background: #FFFFFF;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.02);
+   border: 1px solid rgba(0, 0, 0, 0.05);
+   border-radius: 15px;
    overflow: hidden;
    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    height: 100%;
-   padding: 30px 25px;
+   padding: 25px;
 }
 
 .project-list ul li:hover .content {
    transform: scale(1.05) !important;
-   background: #F8F8F8;
 }
 
 .project-list .category-tag-list {
