@@ -81,12 +81,13 @@ section {
    left: 0;
    opacity: 0;
    pointer-events: none;
-   transition: opacity .5s ease;
+   transition: opacity .5s .7s ease;
 }
 
 .overlay.visible {
    opacity: 1;
    pointer-events: all;
+   transition-delay: 0s;
 }
 
 nav.main {
@@ -107,7 +108,7 @@ nav.main.has-shadow {
    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
 }
 
-nav.main .branding span.has-serif-font {
+nav.main .branding .has-serif-font {
    font: 900 20px "p22-mackinac-pro";
 }
 
@@ -150,7 +151,7 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
       padding: 100px 5% 20px 5%;
       transform: translateY(calc(-100% + 70px));
       z-index: 2;
-      transition: transform 1s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: transform 1s 0.7s cubic-bezier(0.19, 1, 0.22, 1);
    }
    nav.main .page-links ul li {
       float: none;
@@ -158,6 +159,21 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
       opacity: 0;
       transform: translateY(10px);
       transition: .4s ease;
+   }
+   nav.main .page-links ul li:nth-child(1) {
+      transition-delay: .4s;
+   }
+   nav.main .page-links ul li:nth-child(2) {
+      transition-delay: .3s;
+   }
+   nav.main .page-links ul li:nth-child(3) {
+      transition-delay: .2s;
+   }
+   nav.main .page-links ul li:nth-child(4) {
+      transition-delay: .1s;
+   }
+   nav.main .page-links ul li:nth-child(5) {
+      transition-delay: 0s;
    }
    nav.main .page-links ul li a {
       font-size: 20px;
