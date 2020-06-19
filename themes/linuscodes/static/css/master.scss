@@ -7,6 +7,8 @@ $white: #FFFFFF;
 $grayPrimary: #8F8F8F;
 $graySecondary: #F8F8F8;
 
+$bounceCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 $sans: 'inter';
 $serif: 'p22-mackinac-pro';
 
@@ -36,6 +38,10 @@ h2 {
    margin-bottom: 10px;
 }
 
+h3 {
+   font-size: 25px;
+}
+
 p {
    font: 16px/1.8 $sans;
    color: $grayPrimary;
@@ -52,7 +58,7 @@ a {
    }
 
    &:hover {
-      opacity: .5;
+      color: $grayPrimary;
    }
 }
 
@@ -66,24 +72,14 @@ a {
    }
 }
 
-// .scroll-into-view {
-//    transform: translateY(50px);
-//    opacity: 0;
-//    transition: .6s ease;
-//
-//    &.visible {
-//       transform: translateY(0);
-//       opacity: 1;
-//    }
-// }
-
 section {
    padding-top: 50px;
-   padding-bottom: 50px;
+   padding-bottom: 200px;
 }
 
 @import "components/navigation";
 @import "components/header";
 @import "components/project-list";
+@import "components/footer";
 
 @import "atoms/button";

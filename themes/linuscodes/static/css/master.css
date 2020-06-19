@@ -24,6 +24,10 @@ h2 {
    margin-bottom: 10px;
 }
 
+h3 {
+   font-size: 25px;
+}
+
 p {
    font: 16px/1.8 "inter";
    color: #8F8F8F;
@@ -41,7 +45,7 @@ a.link {
 }
 
 a:hover {
-   opacity: .5;
+   color: #8F8F8F;
 }
 
 .has-padding {
@@ -58,7 +62,7 @@ a:hover {
 
 section {
    padding-top: 50px;
-   padding-bottom: 50px;
+   padding-bottom: 200px;
 }
 
 nav.main {
@@ -130,14 +134,14 @@ header.intro .btn {
    }
 }
 
-header.category-list-header {
+header.category-list-header, header.post-header {
    min-height: 50vh;
    flex-direction: column;
    align-items: flex-start;
    justify-content: center;
 }
 
-header.category-list-header span {
+header.category-list-header span, header.post-header span {
    font-family: "inter";
    display: block;
    text-transform: uppercase;
@@ -162,6 +166,7 @@ header.category-list-header span {
 
 .project-list ul {
    list-style: none;
+   position: relative;
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    gap: 100px;
@@ -236,39 +241,76 @@ header.category-list-header span {
    display: block;
 }
 
+footer.main {
+   background: #F8F8F8;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 50px;
+}
+
+footer.main h3 {
+   margin-bottom: 10px;
+}
+
+footer.main ul {
+   list-style: none;
+}
+
+footer.main ul li {
+   margin-bottom: 5px;
+}
+
+footer.main .btn {
+   margin-top: 30px;
+}
+
+footer.main .branding img {
+   width: 50px;
+}
+
 .btn {
    border: none;
    position: relative;
-   padding: 13px 30px 14px 30px;
    border-radius: 10px;
    font: 16px/1 "inter";
+   padding: 13px 30px 14px 30px;
    display: inline-flex;
    align-items: center;
+   border: 1px solid transparent;
+   background: #FFFFFF;
+   transition: background 0.4s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+   transform: scale(0.98);
+}
+
+.btn:active, .btn:focus {
+   transform: scale(0.95);
 }
 
 .btn.primary {
    background: #061BFF;
    color: #FFFFFF;
+   border-color: #061BFF;
+}
+
+.btn.primary:hover {
+   background: #0014ec;
+   color: #FFFFFF;
 }
 
 .btn.secondary {
-   background: #F8F8F8;
+   background: #ebebeb;
    color: #000000;
+}
+
+.btn.secondary:hover {
+   background: #dfdfdf;
 }
 
 .btn.tertiary {
    color: #8F8F8F;
-}
-
-.btn.has-icon .icon {
-   position: relative;
-   display: inline-block;
-}
-
-.btn.has-icon .icon.arrow-down {
-   padding-right: 10px;
-}
-
-.btn.has-icon .icon.arrow-down img {
-   transform: rotate(-90deg);
 }

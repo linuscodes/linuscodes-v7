@@ -3,38 +3,45 @@
 .btn {
    border: none;
    position: relative;
-   padding: 13px 30px 14px 30px;
    border-radius: 10px;
    font: 16px/1 $sans;
+   padding: 13px 30px 14px 30px;
    display: inline-flex;
    align-items: center;
+   border: 1px solid transparent;
+   background: $white;
+   transition: background .4s ease, transform .3s $bounceCubic;
+
+   &:hover {
+      transform: scale(0.98);
+   }
+
+   &:active,
+   &:focus {
+      transform: scale(0.95);
+   }
 
    &.primary {
       background: $bluePrimary;
       color: $white;
+      border-color: $bluePrimary;
+
+      &:hover {
+         background: darken($bluePrimary, 5%);
+         color: $white;
+      }
    }
 
    &.secondary {
-      background: $graySecondary;
+      background: darken($graySecondary, 5%);
       color: $black;
+
+      &:hover {
+         background: darken($graySecondary, 10%);
+      }
    }
 
    &.tertiary {
       color: $grayPrimary;
-   }
-
-   &.has-icon {
-      .icon {
-         position: relative;
-         display: inline-block;
-
-         &.arrow-down {
-            padding-right: 10px;
-
-            img {
-               transform: rotate(-90deg);
-            }
-         }
-      }
    }
 }

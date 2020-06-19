@@ -1,0 +1,32 @@
+// main: ../master.scss
+
+footer.main {
+   background: $graySecondary;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 50px;
+
+   h3 {
+      margin-bottom: 10px;
+   }
+
+   ul {
+      list-style: none;
+
+      li {
+         margin-bottom: 5px;
+      }
+   }
+
+   .btn {
+      margin-top: 30px;
+   }
+
+   .branding {
+      img {
+         width: 50px;
+      }
+   }
+}

@@ -16,16 +16,13 @@ window.onscroll = function() {
 }
 
 // add smooth scroll to all links with anchor
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//    anchor.addEventListener('click', function(e) {
-//       e.preventDefault();
-//
-//       $('body, html').animate({ 'scrollTop': (anchor.attr('href').offset().top - 70) }, 800)
-//    });
-// });
-
 $('a[href^="#"]').on('click', function(e) {
    e.preventDefault();
 
-   $('html, body').animate({ 'scrollTop': (document.querySelector(e.target.getAttribute('href')).offsetTop - 70) }, 800)
+   var target = this.hash;
+   var $target = $(target);
+
+   $('html, body').stop().animate({ 'scrollTop': $target.offset().top - 70 }, 900, $.bez([0.770, 0, 0.175, 1]), function () {
+      window.location.hash = target;
+   });
 });
