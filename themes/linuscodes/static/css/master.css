@@ -342,31 +342,29 @@ header .button-group .btn:not(:last-child) {
    transition-delay: .10s;
 }
 
-.project-list ul li .wrapper {
+.project-list ul li .content {
    height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: flex-start;
    background: #fbfbfb;
    border-radius: 10px;
    overflow: hidden;
    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
-}
-
-.project-list ul li .wrapper .content {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   height: 100%;
    padding: 30px 25px;
 }
 
-.project-list ul li:hover .wrapper {
+.project-list ul li:hover .content {
    transform: scale(1.05) !important;
    background: #F8F8F8;
 }
 
 .project-list .category-tag-list {
-   margin-top: 25px;
+   margin-top: auto;
    position: relative;
    bottom: 0;
+   justify-self: flex-end;
 }
 
 .project-list .category-tag-list .category-tag {
@@ -387,6 +385,10 @@ header .button-group .btn:not(:last-child) {
 .project-list .project-list-title {
    margin-bottom: 10px;
    display: block;
+}
+
+.project-list .project-list-description {
+   margin-bottom: 40px;
 }
 
 .project-list .btn {
