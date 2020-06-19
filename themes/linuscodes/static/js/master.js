@@ -26,3 +26,9 @@ $('a[href^="#"]').on('click', function(e) {
       window.location.hash = target;
    });
 });
+
+// open menu when clicking mobile button
+document.querySelector('.mobile-btn').onclick = function() {
+   document.querySelector('nav.main').classList.toggle('mobile-nav-opened');
+   document.querySelector('.overlay').classList.toggle('visible');
+}
