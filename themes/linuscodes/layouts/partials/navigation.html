@@ -7,21 +7,13 @@
 
    <div class="page-links">
       <ul>
+         {{ range .Site.Menus.main }}
          <li>
-            <a href="#">Home</a>
+            <a href="{{ .URL }}">
+               {{ .Name }}
+            </a>
          </li>
-         <li>
-            <a href="#">Work</a>
-         </li>
-         <li>
-            <a href="#">Playground</a>
-         </li>
-         <li>
-            <a href="https://blog.linuscodes.com/">Blog</a>
-         </li>
-         <li>
-            <a href="#">About</a>
-         </li>
+         {{ end}}
       </ul>
    </div>
 </nav>
