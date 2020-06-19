@@ -9,6 +9,7 @@ dateFormat = "Monday, January 2, 2006"
    github = "https://github.com/linuscodes"
    mail = "moin@linuscodes.com"
    twitter = "https://twitter.com/linuscodes"
+   codepen = "https://codepen.io/linuscodes"
 
 [Permalinks]
    project = "/project/:filename/"
