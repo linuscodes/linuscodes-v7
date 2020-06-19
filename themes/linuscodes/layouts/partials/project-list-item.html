@@ -1,0 +1,24 @@
+<li class="scroll-into-view">
+   <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Go to project detail">
+      <h2 class="project-list-title">
+         {{ .Title }}
+      </h2>
+
+      {{ with .Description }}
+         <p class="project-list-description">
+            {{ . }}
+         </p>
+      {{ end }}
+
+      {{ if .Params.categories }}
+         <div class="category-tag-list">
+            {{ $len := len .Params.categories }}
+            {{ range $index, $tag := .Params.categories }}
+               <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
+                  {{ . }}
+               </a>
+            {{ end }}
+         </div>
+      {{ end }}
+   </a>
+</li>

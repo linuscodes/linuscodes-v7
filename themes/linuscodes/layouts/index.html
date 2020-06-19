@@ -1,3 +1,46 @@
-<h1>
-   Hey there
-</h1>
+{{ partial "head.html" . }}
+
+{{ partial "navigation.html" . }}
+
+<div class="main-content">
+   <header class="intro has-padding">
+      <div class="content">
+         <h1>
+            Hi, I'm Linus!
+         </h1>
+         <p>
+            A self-taught user-experience designer and front-end developer from Hamburg, Germany. <wbr>I bring attention to the smallest details to create an unforgettable user experience.
+         </p>
+
+         <a href="#work" class="btn secondary has-icon scroll-to-hashtag">
+            <span class="icon arrow-down">
+               <img src="assets/icons/arrow-black.svg">
+            </span>
+            Explore
+         </a>
+      </div>
+   </header>
+
+   <section class="has-padding work" id="work">
+      <h1 class="scroll-into-view">
+         Work
+      </h1>
+
+      <div class="project-list">
+         <ul>
+            {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+            {{ range where $pag.Pages.ByPublishDate.Reverse "Params.type" "project" }}
+               {{ partial "project-list-item.html" . }}
+            {{ end }}
+         </ul>
+      </div>
+   </section>
+
+   <section class="has-padding writing">
+      <h1 class="scroll-into-view">
+         Publishing
+      </h1>
+   </section>
+</div>
+
+{{ partial "footer.html" . }}

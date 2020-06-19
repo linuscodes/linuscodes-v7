@@ -1,0 +1,47 @@
+// main: ../master.scss
+
+.project-list {
+   margin-top: 50px;
+
+   ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 100px;
+
+      @media screen and (max-width: 768px) {
+         grid-template-columns: 1fr;
+      }
+
+      li {
+         @for $i from 1 through 10 {
+            &:nth-child(#{$i}) {
+               transition-delay: #{ '.' + $i + 's'};
+            }
+         }
+      }
+   }
+
+   .category-tag-list {
+      margin-top: 25px;
+
+      .category-tag {
+         padding: 5px 15px;
+         border-radius: 20px;
+         color: $black;
+         background: $graySecondary;
+         border: 1px solid lighten($black, 95%);
+         display: inline-block;
+         font-size: 13px;
+
+         &:not(:last-child) {
+            margin-right: 5px;
+         }
+      }
+   }
+
+   .project-list-title {
+      margin-bottom: 10px;
+      display: block;
+   }
+}

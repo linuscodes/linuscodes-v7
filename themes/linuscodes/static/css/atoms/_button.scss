@@ -1,0 +1,40 @@
+// main: ../master.scss
+
+.btn {
+   border: none;
+   position: relative;
+   padding: 13px 30px 14px 30px;
+   border-radius: 10px;
+   font: 16px/1 $sans;
+   display: inline-flex;
+   align-items: center;
+
+   &.primary {
+      background: $bluePrimary;
+      color: $white;
+   }
+
+   &.secondary {
+      background: $graySecondary;
+      color: $black;
+   }
+
+   &.tertiary {
+      color: $grayPrimary;
+   }
+
+   &.has-icon {
+      .icon {
+         position: relative;
+         display: inline-block;
+
+         &.arrow-down {
+            padding-right: 10px;
+
+            img {
+               transform: rotate(-90deg);
+            }
+         }
+      }
+   }
+}

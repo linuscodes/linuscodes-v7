@@ -1,0 +1,39 @@
+// main: ../master.scss
+
+nav.main {
+   width: 100%;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background: $white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   transition: box-shadow .3s ease;
+   z-index: 5;
+
+   &.has-shadow {
+      box-shadow: 0 0 20px 10px rgba($color: $black, $alpha: .05);
+   }
+
+   .branding {
+      span.has-serif-font {
+         font: 500 20px $serif;
+      }
+   }
+
+   .page-links {
+      ul {
+         list-style: none;
+
+         li {
+            float: left;
+
+            &:not(:last-child) {
+               margin-right: 20px;
+            }
+         }
+      }
+   }
+}

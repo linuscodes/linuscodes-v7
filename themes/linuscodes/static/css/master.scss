@@ -1,0 +1,89 @@
+// compileOnSave: true
+
+$bluePrimary: #061BFF;
+$blueSecondary: #1F2ED1;
+$black: #000000;
+$white: #FFFFFF;
+$grayPrimary: #8F8F8F;
+$graySecondary: #F8F8F8;
+
+$sans: 'inter';
+$serif: 'p22-mackinac-pro';
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   outline: none;
+   appearance: none;
+   -webkit-appearance: none;
+   font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $serif;
+}
+
+h1 {
+   font-size: 40px;
+   font-weight: 900;
+   margin-bottom: 15px;
+}
+
+h2 {
+   font-size: 30px;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+p {
+   font: 16px/1.8 $sans;
+   color: $grayPrimary;
+}
+
+a {
+   font: 16px $sans;
+   color: $black;
+   text-decoration: none;
+   transition: opacity .3s ease;
+
+   &.link {
+      color: $bluePrimary;
+   }
+
+   &:hover {
+      opacity: .5;
+   }
+}
+
+.has-padding {
+   padding-left: 15%;
+   padding-right: 15%;
+
+   @media screen and (max-width: 768px) {
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+}
+
+.scroll-into-view {
+   transform: translateY(50px);
+   opacity: 0;
+   transition: .6s ease;
+
+   &.visible {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+section {
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+@import "components/navigation";
+@import "components/header";
+@import "components/project-list";
+
+@import "atoms/button";

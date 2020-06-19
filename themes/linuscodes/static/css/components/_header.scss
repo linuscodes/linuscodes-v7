@@ -1,0 +1,32 @@
+// main: ../master.scss
+
+header {
+   min-height: 100vh;
+   height: 100%;
+   display: flex;
+   align-items: center;
+
+   &.intro {
+      h1 {
+         font-size: 70px;
+      }
+
+      p {
+         font-size: 20px;
+      }
+
+      .btn {
+         margin-top: 70px;
+      }
+
+      @media screen and (max-width: 640px) {
+         h1 {
+            font-size: 40px;
+         }
+
+         p {
+            font-size: 16px;
+         }
+      }
+   }
+}

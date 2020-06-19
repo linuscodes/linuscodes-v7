@@ -1,3 +1,15 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Linus Rogge"
+theme = "linuscodes"
+dateFormat = "Monday, January 2, 2006"
+
+[Params]
+   instagram = "https://instagram.com/linuscodes"
+   github = "https://github.com/linuscodes"
+   mail = "moin@linuscodes.com"
+   twitter = "https://twitter.com/linuscodes"
+
+[Permalinks]
+   project = "/project/:filename/"
+   page = "/:filename/"
