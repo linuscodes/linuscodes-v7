@@ -22,7 +22,7 @@ $('a[href^="#"]').on('click', function(e) {
    var target = this.hash;
    var $target = $(target);
 
-   $('html, body').stop().animate({ 'scrollTop': $target.offset().top - 70 }, 900, $.bez([0.770, 0, 0.175, 1]), function () {
+   $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, $.bez([0.770, 0, 0.175, 1]), function () {
       window.location.hash = target;
    });
 });
