@@ -27,5 +27,5 @@ window.onscroll = function() {
 $('a[href^="#"]').on('click', function(e) {
    e.preventDefault();
 
-   $('html, body').animate({ 'scrollTop': (document.querySelector(e.target.getAttribute('href')).offsetTop - 50) }, 800)
+   $('html, body').animate({ 'scrollTop': (document.querySelector(e.target.getAttribute('href')).offsetTop - 70) }, 800)
 });
