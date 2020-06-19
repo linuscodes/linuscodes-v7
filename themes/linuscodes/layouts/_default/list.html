@@ -1,0 +1,50 @@
+{{ partial "head.html" . }}
+
+{{ partial "navigation.html" . }}
+
+<div class="main-content">
+   <header class="category-list-header has-padding">
+      <span class="type">
+         {{ print (.Data.Singular | title) }}
+      </span>
+      <h1 class="category-heading">
+         {{ .Title }}
+      </h1>
+   </header>
+
+   <section class="has-padding">
+      <div class="project-list">
+         <ul>
+            {{ $pag := .Paginate .Pages }}
+            {{ range $pag.Pages }}
+               <li>
+                  <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+                     <h2 class="project-list-title">
+                        {{ .Title }}
+                     </h2>
+
+                     {{ with .Description }}
+                        <p class="project-list-description">
+                           {{ . }}
+                        </p>
+                     {{ end }}
+
+                     {{ if .Params.categories }}
+                        <div class="category-tag-list">
+                           {{ $len := len .Params.categories }}
+                           {{ range $index, $tag := .Params.categories }}
+                              <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
+                                 {{ . }}
+                              </a>
+                           {{ end }}
+                        </div>
+                     {{ end }}
+                  </a>
+               </li>
+            {{ end }}
+         </ul>
+      </div>
+   </section>
+</div>
+
+{{ partial "footer.html" . }}
