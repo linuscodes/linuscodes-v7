@@ -1,14 +1,16 @@
 <li>
-   <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
-      <h2 class="project-list-title">
-         {{ .Title }}
-      </h2>
+   <div class="wrapper">      
+      <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+         <h2 class="project-list-title">
+            {{ .Title }}
+         </h2>
 
-      {{ with .Description }}
-         <p class="project-list-description">
-            {{ . }}
-         </p>
-      {{ end }}
+         {{ with .Description }}
+            <p class="project-list-description">
+               {{ . }}
+            </p>
+         {{ end }}
+      </a>
 
       {{ if .Params.categories }}
          <div class="category-tag-list">
@@ -20,5 +22,6 @@
             {{ end }}
          </div>
       {{ end }}
-   </a>
+      <!-- <a href="{{ .Permalink }}" class="btn primary">View case study</a> -->
+   </div>
 </li>

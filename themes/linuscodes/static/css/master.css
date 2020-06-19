@@ -8,6 +8,11 @@
    font-display: swap;
 }
 
+.resize-animation-stopper * {
+   animation: none !important;
+   transition: none !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
    font-family: "p22-mackinac-pro";
 }
@@ -61,7 +66,7 @@ a:hover {
 }
 
 section {
-   padding-top: 50px;
+   padding-top: 150px;
    padding-bottom: 200px;
 }
 
@@ -128,6 +133,10 @@ nav.main .page-links ul li:not(:last-child) {
    margin-right: 20px;
 }
 
+nav.main .mobile-btn {
+   display: none;
+}
+
 nav.main .mobile-btn .bars .bar {
    width: 30px;
    height: 3px;
@@ -142,6 +151,9 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
    nav.main .branding,
    nav.main .mobile-btn {
       z-index: 3;
+   }
+   nav.main .mobile-btn {
+      display: block;
    }
    nav.main .page-links {
       position: fixed;
@@ -253,6 +265,10 @@ header.category-list-header span, header.post-header span {
    letter-spacing: 1px;
 }
 
+header .button-group .btn:not(:last-child) {
+   margin-right: 5px;
+}
+
 .project-list {
    margin-top: 50px;
 }
@@ -273,7 +289,7 @@ header.category-list-header span, header.post-header span {
    position: relative;
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-   gap: 100px;
+   gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -322,8 +338,25 @@ header.category-list-header span, header.post-header span {
    transition-delay: .10s;
 }
 
+.project-list ul li .wrapper {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background: #fbfbfb;
+   padding: 30px 25px;
+   border-radius: 10px;
+   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-list ul li:hover .wrapper {
+   transform: scale(1.05) !important;
+}
+
 .project-list .category-tag-list {
    margin-top: 25px;
+   position: relative;
+   bottom: 0;
 }
 
 .project-list .category-tag-list .category-tag {
@@ -338,11 +371,16 @@ header.category-list-header span, header.post-header span {
 
 .project-list .category-tag-list .category-tag:not(:last-child) {
    margin-right: 5px;
+   margin-bottom: 5px;
 }
 
 .project-list .project-list-title {
    margin-bottom: 10px;
    display: block;
+}
+
+.project-list .btn {
+   margin-top: 40px;
 }
 
 footer.main {

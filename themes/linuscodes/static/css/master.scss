@@ -22,6 +22,11 @@ $serif: 'p22-mackinac-pro';
    font-display: swap;
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
    font-family: $serif;
 }
@@ -73,7 +78,7 @@ a {
 }
 
 section {
-   padding-top: 50px;
+   padding-top: 150px;
    padding-bottom: 200px;
 
    @media screen and (max-width: 768px) {

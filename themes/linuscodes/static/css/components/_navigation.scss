@@ -39,13 +39,17 @@ nav.main {
       }
    }
 
-   .mobile-btn .bars .bar {
-      width: 30px;
-      height: 3px;
-      background: #000;
+   .mobile-btn {
+      display: none;
+      
+      .bars .bar {
+         width: 30px;
+         height: 3px;
+         background: #000;
 
-      &:not(:last-child) {
-        margin-bottom: 5px;
+         &:not(:last-child) {
+           margin-bottom: 5px;
+        }
      }
   }
 
@@ -53,6 +57,10 @@ nav.main {
       .branding,
       .mobile-btn {
          z-index: 3;
+      }
+
+      .mobile-btn {
+         display: block;
       }
 
       .page-links {

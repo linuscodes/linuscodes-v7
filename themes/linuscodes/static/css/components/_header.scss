@@ -50,4 +50,10 @@ header {
          letter-spacing: 1px;
       }
    }
+
+   .button-group {
+      .btn:not(:last-child) {
+         margin-right: 5px;
+      }
+   }
 }

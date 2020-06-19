@@ -32,3 +32,14 @@ document.querySelector('.mobile-btn').onclick = function() {
    document.querySelector('nav.main').classList.toggle('mobile-nav-opened');
    document.querySelector('.overlay').classList.toggle('visible');
 }
+
+// kill all animations and transitions while resizing the window
+let resizeTimer;
+window.addEventListener("resize", () => {
+   document.body.classList.add("resize-animation-stopper");
+   
+   clearTimeout(resizeTimer);
+   resizeTimer = setTimeout(() => {
+      document.body.classList.remove("resize-animation-stopper");
+   }, 400);
+});
