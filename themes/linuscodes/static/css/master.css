@@ -42,7 +42,7 @@ a {
    font: 16px "inter";
    color: #000000;
    text-decoration: none;
-   transition: opacity .3s ease;
+   transition: color .3s ease;
 }
 
 a.link {
@@ -51,6 +51,10 @@ a.link {
 
 a:hover {
    color: #8F8F8F;
+}
+
+img {
+   max-width: 100%;
 }
 
 .has-padding {
@@ -343,14 +347,20 @@ header .button-group .btn:not(:last-child) {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   align-items: flex-start;
    background: #fbfbfb;
-   padding: 30px 25px;
    border-radius: 10px;
-   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   overflow: hidden;
+   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
+}
+
+.project-list ul li .wrapper .content {
+   padding: 30px 25px;
 }
 
 .project-list ul li:hover .wrapper {
    transform: scale(1.05) !important;
+   background: #F8F8F8;
 }
 
 .project-list .category-tag-list {

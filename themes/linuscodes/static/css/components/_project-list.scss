@@ -36,21 +36,26 @@
             }
          }
 
-
          .wrapper {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: flex-start;
             background: lighten($graySecondary, 1%);
-            padding: 30px 25px;
             border-radius: 10px;
-            transition: transform .5s $bounceCubic;
+            overflow: hidden;
+            transition: transform .5s $bounceCubic, background .5s ease;
+
+            .content {
+               padding: 30px 25px;
+            }
          }
 
          &:hover {
             .wrapper {
                transform: scale(1.05) !important;
+               background: $graySecondary;
             }
          }
       }

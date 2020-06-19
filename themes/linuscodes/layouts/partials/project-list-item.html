@@ -1,27 +1,31 @@
 <li>
-   <div class="wrapper">      
-      <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
-         <h2 class="project-list-title">
-            {{ .Title }}
-         </h2>
-
-         {{ with .Description }}
-            <p class="project-list-description">
-               {{ . }}
-            </p>
-         {{ end }}
-      </a>
-
-      {{ if .Params.categories }}
-         <div class="category-tag-list">
-            {{ $len := len .Params.categories }}
-            {{ range $index, $tag := .Params.categories }}
-               <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
-                  {{ . }}
-               </a>
-            {{ end }}
-         </div>
+   <div class="wrapper">
+      {{ if .Params.image }}
+         <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="">
       {{ end }}
-      <!-- <a href="{{ .Permalink }}" class="btn primary">View case study</a> -->
+      <div class="content">
+         <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+            <h2 class="project-list-title">
+               {{ .Title }}
+            </h2>
+
+            {{ with .Description }}
+               <p class="project-list-description">
+                  {{ . }}
+               </p>
+            {{ end }}
+         </a>
+
+         {{ if .Params.categories }}
+            <div class="category-tag-list">
+               {{ $len := len .Params.categories }}
+               {{ range $index, $tag := .Params.categories }}
+                  <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
+                     {{ . }}
+                  </a>
+               {{ end }}
+            </div>
+         {{ end }}
+      </div>
    </div>
 </li>
