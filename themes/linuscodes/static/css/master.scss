@@ -66,16 +66,16 @@ a {
    }
 }
 
-.scroll-into-view {
-   transform: translateY(50px);
-   opacity: 0;
-   transition: .6s ease;
-
-   &.visible {
-      transform: translateY(0);
-      opacity: 1;
-   }
-}
+// .scroll-into-view {
+//    transform: translateY(50px);
+//    opacity: 0;
+//    transition: .6s ease;
+//
+//    &.visible {
+//       transform: translateY(0);
+//       opacity: 1;
+//    }
+// }
 
 section {
    padding-top: 50px;

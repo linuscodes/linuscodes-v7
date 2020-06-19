@@ -3,6 +3,21 @@
 .project-list {
    margin-top: 50px;
 
+   &.scroll-into-view {
+      ul li {
+         transform: translateY(50px);
+         opacity: 0;
+         transition: .6s ease;
+      }
+
+      &.visible {
+         ul li {   
+            transform: translateY(0);
+            opacity: 1;
+         }
+      }
+   }
+
    ul {
       list-style: none;
       display: grid;

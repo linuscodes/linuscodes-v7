@@ -56,17 +56,6 @@ a:hover {
    }
 }
 
-.scroll-into-view {
-   transform: translateY(50px);
-   opacity: 0;
-   transition: .6s ease;
-}
-
-.scroll-into-view.visible {
-   transform: translateY(0);
-   opacity: 1;
-}
-
 section {
    padding-top: 50px;
    padding-bottom: 50px;
@@ -158,6 +147,17 @@ header.category-list-header span {
 
 .project-list {
    margin-top: 50px;
+}
+
+.project-list.scroll-into-view ul li {
+   transform: translateY(50px);
+   opacity: 0;
+   transition: .6s ease;
+}
+
+.project-list.scroll-into-view.visible ul li {
+   transform: translateY(0);
+   opacity: 1;
 }
 
 .project-list ul {

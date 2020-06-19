@@ -26,7 +26,7 @@
          Work
       </h1>
 
-      <div class="project-list">
+      <div class="project-list scroll-into-view">
          <ul>
             {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
             {{ range where $pag.Pages.ByPublishDate.Reverse "Params.type" "project" }}
