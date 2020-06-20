@@ -20,6 +20,7 @@ $serif: 'p22-mackinac-pro';
    appearance: none;
    -webkit-appearance: none;
    font-display: swap;
+   font-family: $sans;
 }
 
 .resize-animation-stopper * {
@@ -38,8 +39,7 @@ h1 {
 }
 
 h2 {
-   font-size: 30px;
-   font-weight: 500;
+   font: 500 30px/1.4 $serif;
    margin-bottom: 10px;
 }
 
@@ -50,6 +50,7 @@ h3 {
 p {
    font: 16px/1.8 $sans;
    color: $grayPrimary;
+   margin-bottom: 15px;
 }
 
 a {
@@ -122,9 +123,11 @@ section {
    }
 }
 
+@import "atoms/button";
+
 @import "components/navigation";
 @import "components/header";
 @import "components/project-list";
 @import "components/footer";
 
-@import "atoms/button";
+@import "pages/about";

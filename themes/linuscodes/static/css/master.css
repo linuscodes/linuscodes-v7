@@ -6,6 +6,7 @@
    appearance: none;
    -webkit-appearance: none;
    font-display: swap;
+   font-family: "inter";
 }
 
 .resize-animation-stopper * {
@@ -24,8 +25,7 @@ h1 {
 }
 
 h2 {
-   font-size: 30px;
-   font-weight: 500;
+   font: 500 30px/1.4 "p22-mackinac-pro";
    margin-bottom: 10px;
 }
 
@@ -36,6 +36,7 @@ h3 {
 p {
    font: 16px/1.8 "inter";
    color: #8F8F8F;
+   margin-bottom: 15px;
 }
 
 a {
@@ -108,6 +109,51 @@ section {
    opacity: 1;
    pointer-events: all;
    transition-delay: 0s;
+}
+
+.btn {
+   border: none;
+   position: relative;
+   border-radius: 10px;
+   font: 16px/1 "inter";
+   padding: 13px 30px 14px 30px;
+   display: inline-flex;
+   align-items: center;
+   border: 1px solid transparent;
+   background: #FFFFFF;
+   transition: background 0.4s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+   transform: scale(0.98);
+}
+
+.btn:active, .btn:focus {
+   transform: scale(0.95);
+}
+
+.btn.primary {
+   background: #061BFF;
+   color: #FFFFFF;
+   border-color: #061BFF;
+}
+
+.btn.primary:hover {
+   background: #0014ec;
+   color: #FFFFFF;
+}
+
+.btn.secondary {
+   background: #ebebeb;
+   color: #000000;
+}
+
+.btn.secondary:hover {
+   background: #dfdfdf;
+}
+
+.btn.tertiary {
+   color: #8F8F8F;
 }
 
 nav.main {
@@ -219,14 +265,20 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
 
 header {
    margin-top: 70px;
-   min-height: 100vh;
+   min-height: 50vh;
    height: 100%;
    display: flex;
-   align-items: center;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+header.intro {
+   min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
-   header {
+   header.intro {
       min-height: 80vh;
    }
 }
@@ -252,14 +304,7 @@ header.intro .btn {
    }
 }
 
-header.category-list-header, header.post-header {
-   min-height: 50vh;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: center;
-}
-
-header.category-list-header span, header.post-header span {
+header span {
    font-family: "inter";
    display: block;
    text-transform: uppercase;
@@ -393,7 +438,6 @@ header .button-group .btn:not(:last-child) {
 }
 
 footer.main {
-   background: #F8F8F8;
    padding-top: 50px;
    padding-bottom: 50px;
    display: grid;
@@ -421,47 +465,29 @@ footer.main .branding img {
    width: 50px;
 }
 
-.btn {
-   border: none;
-   position: relative;
-   border-radius: 10px;
-   font: 16px/1 "inter";
-   padding: 13px 30px 14px 30px;
-   display: inline-flex;
-   align-items: center;
-   border: 1px solid transparent;
-   background: #FFFFFF;
-   transition: background 0.4s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+footer.post {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background: #f8f8f8;
 }
 
-.btn:hover {
-   transform: scale(0.98);
+.about-layout {
+   display: flex;
+   flex-wrap: wrap;
 }
 
-.btn:active, .btn:focus {
-   transform: scale(0.95);
+.about-layout .item:nth-child(1) {
+   width: 35%;
+   padding-right: 5%;
 }
 
-.btn.primary {
-   background: #061BFF;
-   color: #FFFFFF;
-   border-color: #061BFF;
+.about-layout .item:nth-child(2) {
+   width: 65%;
 }
 
-.btn.primary:hover {
-   background: #0014ec;
-   color: #FFFFFF;
-}
-
-.btn.secondary {
-   background: #ebebeb;
-   color: #000000;
-}
-
-.btn.secondary:hover {
-   background: #dfdfdf;
-}
-
-.btn.tertiary {
-   color: #8F8F8F;
+@media screen and (max-width: 730px) {
+   .about-layout .item:nth-child(1),
+   .about-layout .item:nth-child(2) {
+      width: 100%;
+   }
 }

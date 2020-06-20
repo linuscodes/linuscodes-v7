@@ -2,16 +2,19 @@
 
 header {
    margin-top: 70px;
-   min-height: 100vh;
+   min-height: 50vh;
    height: 100%;
    display: flex;
-   align-items: center;
-
-   @media screen and (max-width: 768px) {
-      min-height: 80vh;
-   }
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
 
    &.intro {
+      min-height: 100vh;
+
+      @media screen and (max-width: 768px) {
+         min-height: 80vh;
+      }
       h1 {
          font-size: 70px;
       }
@@ -35,20 +38,12 @@ header {
       }
    }
 
-   &.category-list-header,
-   &.post-header {
-      min-height: 50vh;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-
-      span {
-         font-family: $sans;
-         display: block;
-         text-transform: uppercase;
-         color: $grayPrimary;
-         letter-spacing: 1px;
-      }
+   span {
+      font-family: $sans;
+      display: block;
+      text-transform: uppercase;
+      color: $grayPrimary;
+      letter-spacing: 1px;
    }
 
    .button-group {
