@@ -1,7 +1,5 @@
-+++
-title = "Projects"
-+++
 
+{{ define "content" }}
 <header class="has-padding">
    <span>
       Projects
@@ -21,10 +19,25 @@ title = "Projects"
       <ul>
          {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
          {{ range where $pag.Pages.ByPublishDate.Reverse "Params.type" "project" }}
-            {{ partial "project-list-item.html" . }}
-         {{ end }}
+         <li>
+            <div class="content">
+               <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+                  <h2 class="project-list-title">
+                     {{ .Title }}
+                  </h2>
 
-         {{ .Params.Title }}
+                  {{ with .Description }}
+                     <p class="project-list-description">
+                        {{ . }}
+                     </p>
+                  {{ end }}
+               </a>
+
+               <a href="{{ .Permalink }}" class="btn primary">Read more</a>
+            </div>
+         </li>
+         {{ end }}
       </ul>
    </div>
 </section>
+{{ end }}
