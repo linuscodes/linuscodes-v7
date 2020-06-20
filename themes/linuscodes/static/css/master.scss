@@ -83,12 +83,14 @@ img {
 }
 
 .main-content,
+.page-content,
 footer.main {
    transition: transform 1s .2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav-opened {
    .main-content,
+   .page-content,
    footer.main {
       transform: translateY(50vh);
       transition-delay: 0s;
