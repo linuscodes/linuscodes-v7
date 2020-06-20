@@ -14,28 +14,31 @@
 </header>
 
 <section class="has-padding" id="featured">
-   <h1>
+   <h2 class="is-bold">
       Featured Project
-   </h1>
+   </h2>
    {{ range first 3 (where .Site.Pages "Params.featured" "true") }}
       <div class="featured-project">
          <div class="content">
             <div class="featured-tag">
                Featured project
             </div>
-            <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
-               <h2 class="project-list-title">
-                  {{ .Title }}
-               </h2>
 
-               {{ with .Description }}
-                  <p class="project-list-description">
-                     {{ . }}
-                  </p>
-               {{ end }}
-            </a>
+            <div class="wrapper">
+               <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+                  <h2 class="project-list-title">
+                     {{ .Title }}
+                  </h2>
 
-            <a href="{{ .Permalink }}" class="btn primary">Read more</a>
+                  {{ with .Description }}
+                     <p class="project-list-description">
+                        {{ . }}
+                     </p>
+                  {{ end }}
+               </a>
+
+               <a href="{{ .Permalink }}" class="btn primary">Read more</a>
+            </div>
          </div>
 
          {{ with .Params.image }}
@@ -50,9 +53,9 @@
 <section class="has-padding" id="overview">
    <div class="text-layout">
       <div class="item">
-         <h1>
+         <h2 class="is-bold">
             Overview
-         </h1>
+         </h2>
       </div>
       <div class="item">
          <p>
