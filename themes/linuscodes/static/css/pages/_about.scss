@@ -5,25 +5,3 @@ body.about {
       padding-bottom: 100px;
    }
 }
-
-.about-layout {
-   display: flex;
-   flex-wrap: wrap;
-
-   .item {
-      &:nth-child(1) {
-         width: 35%;
-         padding-right: 5%;
-      }
-      &:nth-child(2) {
-         width: 65%;
-      }
-   }
-
-   @media screen and (max-width: 730px) {
-      .item:nth-child(1),
-      .item:nth-child(2) {
-         width: 100%;
-      }
-   }
-}

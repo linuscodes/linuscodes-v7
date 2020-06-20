@@ -33,11 +33,11 @@
    }
 
    &.secondary {
-      background: darken($graySecondary, 5%);
+      background: darken($graySecondary, 2%);
       color: $black;
 
       &:hover {
-         background: darken($graySecondary, 10%);
+         background: darken($graySecondary, 5%);
       }
    }
 

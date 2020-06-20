@@ -113,6 +113,27 @@ section {
    transition-delay: 0s;
 }
 
+.text-layout {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.text-layout .item:nth-child(1) {
+   width: 35%;
+   padding-right: 5%;
+}
+
+.text-layout .item:nth-child(2) {
+   width: 65%;
+}
+
+@media screen and (max-width: 730px) {
+   .text-layout .item:nth-child(1),
+   .text-layout .item:nth-child(2) {
+      width: 100%;
+   }
+}
+
 .btn {
    border: none;
    position: relative;
@@ -146,12 +167,12 @@ section {
 }
 
 .btn.secondary {
-   background: #ebebeb;
+   background: #f3f3f3;
    color: #000000;
 }
 
 .btn.secondary:hover {
-   background: #dfdfdf;
+   background: #ebebeb;
 }
 
 .btn.tertiary {
@@ -177,7 +198,7 @@ nav.main.has-shadow {
 }
 
 nav.main .branding .has-serif-font {
-   font: 900 20px "p22-mackinac-pro";
+   font: 500 20px "p22-mackinac-pro";
 }
 
 nav.main .page-links {
@@ -398,6 +419,7 @@ header .button-group .btn:not(:last-child) {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   justify-content: space-between;
    height: 100%;
    padding: 25px;
 }
@@ -475,25 +497,4 @@ footer.post {
 
 body.about section {
    padding-bottom: 100px;
-}
-
-.about-layout {
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.about-layout .item:nth-child(1) {
-   width: 35%;
-   padding-right: 5%;
-}
-
-.about-layout .item:nth-child(2) {
-   width: 65%;
-}
-
-@media screen and (max-width: 730px) {
-   .about-layout .item:nth-child(1),
-   .about-layout .item:nth-child(2) {
-      width: 100%;
-   }
 }
