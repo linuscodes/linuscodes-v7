@@ -347,7 +347,7 @@ header .button-group .btn:not(:last-child) {
    background: #FFFFFF;
    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.02);
    border: 1px solid rgba(0, 0, 0, 0.05);
-   border-radius: 15px;
+   border-radius: 20px;
    overflow: hidden;
    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
    display: flex;
@@ -355,10 +355,6 @@ header .button-group .btn:not(:last-child) {
    align-items: flex-start;
    height: 100%;
    padding: 25px;
-}
-
-.project-list ul li:hover .content {
-   transform: scale(1.05) !important;
 }
 
 .project-list .category-tag-list {
@@ -389,11 +385,13 @@ header .button-group .btn:not(:last-child) {
 }
 
 .project-list .project-list-description {
-   margin-bottom: 40px;
+   margin-bottom: 20px;
 }
 
 .project-list .btn {
    margin-top: 40px;
+   width: 100%;
+   justify-content: center;
 }
 
 footer.main {

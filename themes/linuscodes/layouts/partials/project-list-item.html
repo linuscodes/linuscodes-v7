@@ -17,15 +17,6 @@
          {{ end }}
       </a>
 
-      {{ if .Params.categories }}
-         <div class="category-tag-list">
-            {{ $len := len .Params.categories }}
-            {{ range $index, $tag := .Params.categories }}
-               <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
-                  {{ . }}
-               </a>
-            {{ end }}
-         </div>
-      {{ end }}
+      <a href="{{ .Permalink }}" class="btn primary">Read more</a>
    </div>
 </li>

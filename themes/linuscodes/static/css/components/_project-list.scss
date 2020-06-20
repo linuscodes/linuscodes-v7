@@ -41,7 +41,7 @@
             background: $white;
             box-shadow: 0 0 20px 3px rgba($black, .02);
             border: 1px solid rgba($black, .05);
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             transition: transform .5s $bounceCubic, background .5s ease;
             display: flex;
@@ -49,12 +49,6 @@
             align-items: flex-start;
             height: 100%;
             padding: 25px;
-         }
-
-         &:hover {
-            .content {
-               transform: scale(1.05) !important;
-            }
          }
       }
    }
@@ -87,10 +81,12 @@
    }
 
    .project-list-description {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
    }
 
    .btn {
       margin-top: 40px;
+      width: 100%;
+      justify-content: center;
    }
 }
