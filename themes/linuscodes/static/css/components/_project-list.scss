@@ -91,3 +91,53 @@
       justify-content: center;
    }
 }
+
+.featured-project {
+   width: 100%;
+   background: $white;
+   box-shadow: 0 0 20px 3px rgba($black, .02);
+   border: 1px solid rgba($black, .05);
+   border-radius: 20px;
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+
+   .content {
+      height: 100%;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 25px;
+
+      .featured-tag {
+         padding: 5px 15px;
+         border-radius: 20px;
+         color: $black;
+         background: $graySecondary;
+         border: 1px solid lighten($black, 95%);
+         display: inline-block;
+         font-size: 13px;
+         margin-bottom: 50px;
+      }
+   }
+
+   .image-wrapper {
+      width: 55%;
+      object-fit: cover;
+      display: flex;
+      align-items: flex-end;
+
+      img {
+         vertical-align: bottom;
+      }
+   }
+
+   @media screen and (max-width: 1100px) {
+      .content,
+      .image-wrapper {
+         width: 100%;
+      }
+   }
+}
