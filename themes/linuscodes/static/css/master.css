@@ -293,10 +293,6 @@ header.intro p {
    font-size: 20px;
 }
 
-header.intro .btn {
-   margin-top: 70px;
-}
-
 @media screen and (max-width: 640px) {
    header.intro h1 {
       font-size: 40px;
@@ -312,6 +308,10 @@ header span {
    text-transform: uppercase;
    color: #8F8F8F;
    letter-spacing: 1px;
+}
+
+header .btn {
+   margin-top: 70px;
 }
 
 header .button-group .btn:not(:last-child) {
@@ -471,6 +471,10 @@ footer.post {
    padding-top: 30px;
    padding-bottom: 30px;
    background: #f8f8f8;
+}
+
+body.about section {
+   padding-bottom: 100px;
 }
 
 .about-layout {

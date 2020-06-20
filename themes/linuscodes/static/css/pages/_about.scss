@@ -1,5 +1,11 @@
 // main: ../master.scss
 
+body.about {
+   section {
+      padding-bottom: 100px;
+   }
+}
+
 .about-layout {
    display: flex;
    flex-wrap: wrap;
@@ -16,7 +22,7 @@
 
    @media screen and (max-width: 730px) {
       .item:nth-child(1),
-      .item:nth-child(2) {   
+      .item:nth-child(2) {
          width: 100%;
       }
    }

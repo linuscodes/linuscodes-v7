@@ -23,10 +23,6 @@ header {
          font-size: 20px;
       }
 
-      .btn {
-         margin-top: 70px;
-      }
-
       @media screen and (max-width: 640px) {
          h1 {
             font-size: 40px;
@@ -46,6 +42,10 @@ header {
       letter-spacing: 1px;
    }
 
+   .btn {
+      margin-top: 70px;
+   }
+   
    .button-group {
       .btn:not(:last-child) {
          margin-right: 5px;
