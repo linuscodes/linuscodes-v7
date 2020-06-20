@@ -29,7 +29,8 @@ $('a[href^="#"]').on('click', function(e) {
 
 // open menu when clicking mobile button
 document.querySelector('.mobile-btn').onclick = function() {
-   document.querySelector('nav.main').classList.toggle('mobile-nav-opened');
+   document.querySelector('nav.main').classList.toggle('nav-opened');
+   document.body.classList.toggle('nav-opened');
    document.querySelector('.overlay').classList.toggle('visible');
 }
 
@@ -37,7 +38,7 @@ document.querySelector('.mobile-btn').onclick = function() {
 let resizeTimer;
 window.addEventListener("resize", () => {
    document.body.classList.add("resize-animation-stopper");
-   
+
    clearTimeout(resizeTimer);
    resizeTimer = setTimeout(() => {
       document.body.classList.remove("resize-animation-stopper");
