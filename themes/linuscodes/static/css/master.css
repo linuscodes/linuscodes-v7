@@ -29,6 +29,10 @@ h2 {
    margin-bottom: 10px;
 }
 
+h2.is-bold {
+   font-weight: 700;
+}
+
 h3 {
    font-size: 25px;
 }
@@ -473,7 +477,7 @@ header .button-group .btn:not(:last-child) {
 }
 
 .featured-project .content {
-   height: 100%;
+   height: auto;
    width: 45%;
    display: flex;
    flex-direction: column;
@@ -491,6 +495,10 @@ header .button-group .btn:not(:last-child) {
    display: inline-block;
    font-size: 13px;
    margin-bottom: 50px;
+}
+
+.featured-project .content .project-list-description {
+   margin-bottom: 30px;
 }
 
 .featured-project .image-wrapper {
