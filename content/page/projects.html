@@ -1,0 +1,30 @@
++++
+title = "Projects"
++++
+
+<header class="has-padding">
+   <span>
+      Projects
+   </span>
+   <h1>
+      Made with ❤️ and 🧠
+   </h1>
+
+   <div class="button-group">
+      <a href="#overview" class="btn primary">Explore</a>
+      <a href="mailto:moin@linuscods.com?subject=Start%20your%20project" class="btn secondary">Start your project</a>
+   </div>
+</header>
+
+<section class="has-padding" id="overview">
+   <div class="project-list scroll-into-view">
+      <ul>
+         {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+         {{ range where $pag.Pages.ByPublishDate.Reverse "Params.type" "project" }}
+            {{ partial "project-list-item.html" . }}
+         {{ end }}
+
+         {{ .Params.Title }}
+      </ul>
+   </div>
+</section>
