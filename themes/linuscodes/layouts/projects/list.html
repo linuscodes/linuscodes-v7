@@ -14,9 +14,19 @@
 </header>
 
 <section class="has-padding" id="featured">
-   <h2 class="is-bold">
-      Featured Project
-   </h2>
+   <div class="text-layout">
+      <div class="item">
+         <h2 class="is-bold">
+            Featured Project
+         </h2>
+      </div>
+      <div class="item">
+         <p>
+            This was by far my favorite project to work on. Getting to know, Niki, Björn and Henrik is such a pleasure. We are still on our way to find the right path, but we've already learned so much. And that's what it is all about.
+         </p>
+      </div>
+   </div>
+
    {{ range first 3 (where .Site.Pages "Params.featured" "true") }}
       <div class="featured-project">
          <div class="content">

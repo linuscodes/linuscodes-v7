@@ -474,6 +474,7 @@ header .button-group .btn:not(:last-child) {
    overflow: hidden;
    display: flex;
    flex-wrap: wrap;
+   margin-top: 50px;
 }
 
 .featured-project .content {
@@ -482,7 +483,6 @@ header .button-group .btn:not(:last-child) {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   justify-content: space-between;
    padding: 25px;
 }
 
@@ -494,11 +494,12 @@ header .button-group .btn:not(:last-child) {
    border: 1px solid #f2f2f2;
    display: inline-block;
    font-size: 13px;
-   margin-bottom: 50px;
+   margin-bottom: 100px;
 }
 
 .featured-project .content .project-list-description {
    margin-bottom: 30px;
+   max-width: 80%;
 }
 
 .featured-project .image-wrapper {
@@ -516,6 +517,12 @@ header .button-group .btn:not(:last-child) {
    .featured-project .content,
    .featured-project .image-wrapper {
       width: 100%;
+   }
+   .featured-project .content .featured-tag {
+      margin-bottom: 50px;
+   }
+   .featured-project .content .project-list-description {
+      max-width: 100%;
    }
 }
 
