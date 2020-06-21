@@ -1,4 +1,4 @@
-// compileOnSave: true
+// compileOnSave
 
 $bluePrimary: #061BFF;
 $blueSecondary: #1F2ED1;
@@ -6,6 +6,7 @@ $black: #000000;
 $white: #FFFFFF;
 $grayPrimary: #8F8F8F;
 $graySecondary: #F8F8F8;
+$grayDark: #1A1A1A;
 
 $bounceCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -207,7 +208,6 @@ body.small-sections {
    }
 }
 
-
 @import "atoms/button";
 
 @import "components/navigation";
@@ -216,3 +216,5 @@ body.small-sections {
 @import "components/footer";
 
 @import "pages/playground";
+
+@import "darkmode";

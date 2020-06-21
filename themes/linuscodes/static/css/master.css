@@ -646,3 +646,59 @@ footer.post .scroll-top .scroll-top-link {
       gap: 20px;
    }
 }
+
+@media (prefers-color-scheme: dark) {
+   body {
+      background: #1A1A1A;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      color: #FFFFFF;
+   }
+   a {
+      color: #FFFFFF;
+   }
+   .btn.secondary {
+      background: #272727;
+      color: #FFFFFF;
+   }
+   .btn.secondary:hover {
+      background: #222222;
+   }
+   nav.main {
+      background: #1A1A1A;
+   }
+   nav.main.has-shadow {
+      box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+   }
+   nav.main .branding a {
+      color: #FFFFFF;
+   }
+   nav.main .page-links {
+      background: #1A1A1A;
+   }
+   nav.main .mobile-btn .bars .bar {
+      background: #FFFFFF;
+   }
+   .text-layout .item h3 a:hover {
+      color: #FFFFFF;
+   }
+   .project-list ul li .content {
+      background: #1A1A1A;
+      box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+   }
+   .featured-project {
+      background: #1A1A1A;
+      box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+   }
+   .featured-project .content .featured-tag {
+      background: #1A1A1A;
+      color: #b3b3b3;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+   }
+   footer.post {
+      background: #272727;
+      color: #FFFFFF;
+   }
+}
