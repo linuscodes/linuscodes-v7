@@ -5,6 +5,7 @@ theme = "linuscodes"
 dateFormat = "Monday, January 2, 2006"
 
 [Params]
+   mainSections = ["project"]
    instagram = "https://instagram.com/linuscodes"
    github = "https://github.com/linuscodes"
    mail = "moin@linuscodes.com"
