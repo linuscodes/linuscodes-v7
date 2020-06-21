@@ -18,8 +18,10 @@ nav.main {
    }
 
    .branding {
-      .has-serif-font {
-         font: 500 20px $serif;
+      a {
+         font-size: 25px;
+         font-weight: bold;
+         color: $black;
       }
    }
 

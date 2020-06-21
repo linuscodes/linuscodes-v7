@@ -228,8 +228,10 @@ nav.main.has-shadow {
    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
 }
 
-nav.main .branding .has-serif-font {
-   font: 500 20px "p22-mackinac-pro";
+nav.main .branding a {
+   font-size: 25px;
+   font-weight: bold;
+   color: #000000;
 }
 
 nav.main .page-links {
