@@ -36,5 +36,13 @@ footer {
       padding-top: 30px;
       padding-bottom: 30px;
       background: darken($graySecondary, 0%);
+      display: flex;
+      justify-content: space-between;
+
+      .scroll-top {
+         .scroll-top-link {
+            cursor: pointer;
+         }
+      }
    }
 }

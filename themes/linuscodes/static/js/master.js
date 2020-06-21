@@ -44,3 +44,10 @@ window.addEventListener("resize", () => {
       document.body.classList.remove("resize-animation-stopper");
    }, 400);
 });
+
+// add scroll top action to scroll top footer link
+$('.scroll-top-link').on('click', function(e) {
+   e.preventDefault();
+
+   $('html, body').animate({ scrollTop: 0 }, 900, $.bez([0.770, 0, 0.175, 1]));
+});

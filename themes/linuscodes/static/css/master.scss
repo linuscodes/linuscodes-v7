@@ -109,6 +109,17 @@ section {
    @media screen and (max-width: 768px) {
       padding-top: 100px;
    }
+
+   &.scroll-into-view {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: .5s ease;
+
+      &.visible {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
 }
 
 body.small-sections {
