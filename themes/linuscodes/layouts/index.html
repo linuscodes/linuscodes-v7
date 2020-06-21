@@ -33,8 +33,7 @@
 
    <div class="project-list scroll-into-view">
       <ul>
-         {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-         {{ range where $pag.Pages.ByPublishDate.Reverse "Params.type" "project" }}
+         {{ range where .Site.Pages "Params.type" "project" }}
          <li>
             <div class="content">
                <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
