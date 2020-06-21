@@ -264,7 +264,7 @@ nav.main .page-links ul li {
 }
 
 nav.main .page-links ul li:not(:last-child) {
-   margin-right: 20px;
+   margin-right: 25px;
 }
 
 nav.main .mobile-btn {
@@ -616,4 +616,33 @@ footer.post {
 
 footer.post .scroll-top .scroll-top-link {
    cursor: pointer;
+}
+
+.playground-layout {
+   width: 100%;
+   display: grid;
+   gap: 60px;
+   margin-bottom: 60px;
+}
+
+.playground-layout.full-width {
+   grid-template-columns: 1fr;
+}
+
+.playground-layout.col-2 {
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.playground-layout .item {
+   width: 100%;
+}
+
+.playground-layout .item .has-shadow {
+   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 768px) {
+   .playground-layout {
+      gap: 20px;
+   }
 }
