@@ -159,8 +159,13 @@ body.small-sections section {
 }
 
 @media screen and (max-width: 730px) {
-   .text-layout .item:nth-child(1),
-   .text-layout .item:nth-child(2) {
+   .text-layout .item:first-child h2 {
+      margin-bottom: 3px;
+   }
+   .text-layout .item:first-child p {
+      margin-bottom: 35px;
+   }
+   .text-layout .item:nth-child(1), .text-layout .item:nth-child(2) {
       width: 100%;
    }
 }
