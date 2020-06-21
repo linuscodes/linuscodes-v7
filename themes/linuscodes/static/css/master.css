@@ -34,7 +34,8 @@ h2.is-bold {
 }
 
 h3 {
-   font-size: 25px;
+   font-size: 23px;
+   font-weight: 700;
 }
 
 p {
@@ -98,6 +99,10 @@ section {
    }
 }
 
+body.small-sections section {
+   padding-bottom: 100px;
+}
+
 .overlay {
    width: 100%;
    height: 100%;
@@ -120,6 +125,28 @@ section {
 .text-layout {
    display: flex;
    flex-wrap: wrap;
+}
+
+.text-layout .item h3 a {
+   color: #8F8F8F;
+}
+
+.text-layout .item h3 a:hover {
+   color: #000000;
+}
+
+.text-layout .item h3:not(:first-child) {
+   margin-top: 40px;
+}
+
+.text-layout .item ul {
+   padding-left: 20px;
+   margin-top: 10px;
+}
+
+.text-layout .item ul li {
+   margin-bottom: 5px;
+   color: #666666;
 }
 
 .text-layout .item:nth-child(1) {
@@ -558,8 +585,4 @@ footer.post {
    padding-top: 30px;
    padding-bottom: 30px;
    background: #f8f8f8;
-}
-
-body.about section {
-   padding-bottom: 100px;
 }
