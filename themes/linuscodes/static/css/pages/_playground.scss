@@ -1,0 +1,28 @@
+// main: ../master.scss
+
+.playground-layout {
+   width: 100%;
+   display: grid;
+   gap: 60px;
+   margin-bottom: 60px;
+
+   &.full-width {
+      grid-template-columns: 1fr;
+   }
+
+   &.col-2 {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   }
+
+   .item {
+      width: 100%;
+
+      .has-shadow {
+         box-shadow: 0 0 20px 4px rgba($black, .03);
+      }
+   }
+
+   @media screen and (max-width: 768px) {
+      gap: 20px;
+   }
+}
