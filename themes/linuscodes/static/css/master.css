@@ -198,12 +198,12 @@ body.small-sections section {
 }
 
 .btn.secondary {
-   background: #f3f3f3;
+   background: #F8F8F8;
    color: #000000;
 }
 
 .btn.secondary:hover {
-   background: #ebebeb;
+   background: #f3f3f3;
 }
 
 .btn.tertiary {
