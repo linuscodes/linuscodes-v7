@@ -641,6 +641,33 @@ footer.post .scroll-top .scroll-top-link {
    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.03);
 }
 
+.playground-layout .item .image-wrapper {
+   position: relative;
+   overflow: hidden;
+}
+
+.playground-layout .item .image-wrapper img {
+   vertical-align: top;
+}
+
+.playground-layout .item .image-wrapper::after {
+   content: attr(data-title);
+   position: absolute;
+   left: 20px;
+   bottom: 20px;
+   padding: 10px 20px;
+   border-radius: 10px;
+   background: #F8F8F8;
+   z-index: 1;
+   color: #000000;
+   transform: translateY(59px);
+   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.playground-layout .item .image-wrapper:hover::after {
+   transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
    .playground-layout {
       gap: 20px;

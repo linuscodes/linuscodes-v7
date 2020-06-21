@@ -20,6 +20,35 @@
       .has-shadow {
          box-shadow: 0 0 20px 4px rgba($black, .03);
       }
+
+      .image-wrapper {
+         position: relative;
+         overflow: hidden;
+
+         img {
+            vertical-align: top;
+         }
+
+         &::after {
+            content: attr(data-title);
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: $graySecondary;
+            z-index: 1;
+            color: $black;
+            transform: translateY(59px);
+            transition: transform .5s $bounceCubic;
+         }
+
+         &:hover {
+            &::after {
+               transform: translateY(0);
+            }
+         }
+      }
    }
 
    @media screen and (max-width: 768px) {
