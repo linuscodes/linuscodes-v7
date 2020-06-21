@@ -94,7 +94,7 @@ nav.main {
 
       &.nav-opened {
          .page-links {
-            transform: translateY(0);
+            transform: translateY(-1px);
             transition-delay: 0s;
 
             ul li {

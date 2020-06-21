@@ -312,7 +312,7 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
       font-size: 20px;
    }
    nav.main.nav-opened .page-links {
-      transform: translateY(0);
+      transform: translateY(-1px);
       transition-delay: 0s;
    }
    nav.main.nav-opened .page-links ul li {
