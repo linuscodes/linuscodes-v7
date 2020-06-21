@@ -161,6 +161,7 @@ body.small-sections section {
 @media screen and (max-width: 730px) {
    .text-layout .item:first-child h2 {
       margin-bottom: 3px;
+      font-weight: 900;
    }
    .text-layout .item:first-child p {
       margin-bottom: 35px;
