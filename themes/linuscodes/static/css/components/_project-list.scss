@@ -137,6 +137,14 @@
 
       img {
          vertical-align: bottom;
+         transform: translateY(60px);
+         transition: transform .5s $bounceCubic;
+      }
+   }
+
+   &:hover {
+      .image-wrapper img {
+         transform: translateY(20px);
       }
    }
 
