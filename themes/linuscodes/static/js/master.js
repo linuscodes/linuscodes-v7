@@ -6,6 +6,11 @@
 //    ]
 // });
 
+// add target="_blank" to blog link in navigation
+document.body.onload = function() {
+   document.querySelector("nav.main li:nth-child(3) a").setAttribute('target', '_blank');
+}
+
 window.onscroll = function() {
    // add shadow to nav when page is scrolled
    if(window.pageYOffset > 0) {
