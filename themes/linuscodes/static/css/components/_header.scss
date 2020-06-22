@@ -8,9 +8,86 @@ header {
    flex-direction: column;
    align-items: flex-start;
    justify-content: center;
+   overflow: visible;
+   z-index: 1;
+
+   .header-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .item {
+         &:nth-child(1) {
+            width: 45%;
+         }
+         &:nth-child(2) {
+            width: 55%;
+         }
+
+         .image-wrapper {
+            overflow: hidden;
+            transform: translateY(100px);
+
+            img {
+               vertical-align: top;
+            }
+
+            &.has-shadow {
+               box-shadow: 0 0 20px 4px rgba($black, .03);
+            }
+         }
+      }
+   }
+
+   @media screen and (max-width: 1280px) {
+      .header-layout {
+         align-items: flex-start;
+
+         .item {
+            &:nth-child(1),
+            &:nth-child(2) {
+               width: 100%;
+            }
+
+            &:nth-child(1) {
+               min-height: 30vh;
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               justify-content: center;
+            }
+
+            &:nth-child(2) {
+               z-index: 1;
+            }
+
+            .image-wrapper {
+               transform: translateY(0);
+            }
+         }
+      }
+   }
+
+   span {
+      font-family: $sans;
+      display: block;
+      text-transform: uppercase;
+      color: $grayPrimary;
+      letter-spacing: 1px;
+   }
+
+   .btn {
+      margin-top: 70px;
+   }
+
+   .button-group {
+      .btn:not(:last-child) {
+         margin-right: 5px;
+      }
+   }
 
    &.intro {
-      min-height: 100vh;
+      min-height: calc(100vh - 70px);
 
       @media screen and (max-width: 768px) {
          min-height: 80vh;
@@ -31,24 +108,6 @@ header {
          p {
             font-size: 16px;
          }
-      }
-   }
-
-   span {
-      font-family: $sans;
-      display: block;
-      text-transform: uppercase;
-      color: $grayPrimary;
-      letter-spacing: 1px;
-   }
-
-   .btn {
-      margin-top: 70px;
-   }
-   
-   .button-group {
-      .btn:not(:last-child) {
-         margin-right: 5px;
       }
    }
 }
