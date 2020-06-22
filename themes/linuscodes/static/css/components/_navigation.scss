@@ -37,6 +37,40 @@ nav.main {
             &:not(:last-child) {
                margin-right: 25px;
             }
+
+            &:nth-child(3) {
+               margin-right: 40px;
+
+               a {
+                  &::after {
+                     content: "";
+                     background: url('/assets/icons/arrow-new-black.svg') no-repeat;
+                     width: 15.6px;
+                     height: 12px;
+                     background-size: cover;
+                     position: absolute;
+                     top: 50%;
+                     display: inline-block;
+                     margin-left: 5px;
+                     transform: translateY(-50%) rotate(-45deg);
+                     transition: opacity .3s ease;
+                  }
+
+                  &:hover {
+                     &::after {
+                        opacity: .5;
+                     }
+                  }
+               }
+            }
+
+            a {
+               position: relative;
+
+               &.active {
+                  color: $bluePrimary;
+               }
+            }
          }
       }
    }

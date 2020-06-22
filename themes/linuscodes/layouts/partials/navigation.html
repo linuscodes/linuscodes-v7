@@ -7,9 +7,11 @@
 
    <div class="page-links">
       <ul>
+         {{ $current := . }}
          {{ range .Site.Menus.main }}
+         {{ $topLevel := replace .URL "/" "" }}
          <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            <a href="{{ .URL }}" class="{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq .Name "Blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}active{{ end }}">{{ .Name }}</a>
          </li>
          {{ end}}
       </ul>

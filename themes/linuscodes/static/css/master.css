@@ -267,6 +267,36 @@ nav.main .page-links ul li:not(:last-child) {
    margin-right: 25px;
 }
 
+nav.main .page-links ul li:nth-child(3) {
+   margin-right: 40px;
+}
+
+nav.main .page-links ul li:nth-child(3) a::after {
+   content: "";
+   background: url("/assets/icons/arrow-new-black.svg") no-repeat;
+   width: 15.6px;
+   height: 12px;
+   background-size: cover;
+   position: absolute;
+   top: 50%;
+   display: inline-block;
+   margin-left: 5px;
+   transform: translateY(-50%) rotate(-45deg);
+   transition: opacity .3s ease;
+}
+
+nav.main .page-links ul li:nth-child(3) a:hover::after {
+   opacity: .5;
+}
+
+nav.main .page-links ul li a {
+   position: relative;
+}
+
+nav.main .page-links ul li a.active {
+   color: #061BFF;
+}
+
 nav.main .mobile-btn {
    display: none;
    cursor: pointer;
