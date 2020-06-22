@@ -273,16 +273,25 @@ nav.main .page-links ul li:nth-child(3) {
 
 nav.main .page-links ul li:nth-child(3) a::after {
    content: "";
-   background: url("/assets/icons/arrow-new-black.svg") no-repeat;
+   background: url("/assets/icons/arrow-new-black.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
    width: 15.6px;
    height: 12px;
-   background-size: cover;
    position: absolute;
    top: 50%;
    display: inline-block;
    margin-left: 5px;
-   transform: translateY(-50%) rotate(-45deg);
+   transform: translateY(-45%) rotate(-45deg);
    transition: opacity .3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+   nav.main .page-links ul li:nth-child(3) a::after {
+      background: url("/assets/icons/arrow-new-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
 }
 
 nav.main .page-links ul li:nth-child(3) a:hover::after {
