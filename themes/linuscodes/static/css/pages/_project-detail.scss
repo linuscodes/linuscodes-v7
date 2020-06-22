@@ -3,14 +3,18 @@
 .project-content {
    section {
       &:first-of-type {
+         padding-top: 200px;
          background: $graySecondary;
+
+         @media (prefers-color-scheme: dark) {
+            background: lighten($grayDark, 5%);
+         }
       }
    }
 
    @media screen and (max-width: 1280px) {
       section {
          &:first-of-type {
-            padding-top: 200px;
             transform: translateY(-100px);
          }
       }

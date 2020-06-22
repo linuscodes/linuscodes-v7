@@ -40,6 +40,7 @@ document.querySelector('.mobile-btn').onclick = function() {
    document.body.classList.toggle('nav-opened');
    document.querySelector('.overlay').classList.toggle('visible');
 }
+
 document.querySelector('.overlay').onclick = function() {
    document.querySelector('nav.main').classList.remove('nav-opened');
    document.body.classList.remove('nav-opened');
