@@ -264,7 +264,7 @@ nav.main .page-links ul li {
 }
 
 nav.main .page-links ul li:not(:last-child) {
-   margin-right: 25px;
+   margin-right: 30px;
 }
 
 nav.main .page-links ul li:nth-child(3) {
@@ -302,8 +302,23 @@ nav.main .page-links ul li a {
    position: relative;
 }
 
-nav.main .page-links ul li a.active {
-   color: #061BFF;
+nav.main .page-links ul li a.active::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   bottom: -10px;
+   width: 3px;
+   height: 3px;
+   background: #000000;
+   border-radius: 50%;
+}
+
+@media screen and (max-width: 660px) {
+   nav.main .page-links ul li a.active::after {
+      bottom: 40%;
+      left: -10px;
+      transform: translateY(-50%);
+   }
 }
 
 nav.main .mobile-btn {
@@ -321,7 +336,7 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
    margin-bottom: 5px;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 660px) {
    nav.main .branding,
    nav.main .mobile-btn {
       z-index: 3;
