@@ -300,6 +300,7 @@ nav.main .page-links ul li:nth-child(3) a:hover::after {
 
 nav.main .page-links ul li a {
    position: relative;
+   display: inline-block;
 }
 
 nav.main .page-links ul li a.active::after {
@@ -318,6 +319,12 @@ nav.main .page-links ul li a.active::after {
       bottom: 40%;
       left: -10px;
       transform: translateY(-50%);
+   }
+}
+
+@media (prefers-color-scheme: dark) {
+   nav.main .page-links ul li a.active::after {
+      background: #FFFFFF;
    }
 }
 

@@ -73,6 +73,7 @@ nav.main {
 
             a {
                position: relative;
+               display: inline-block;
 
                &.active {
                   &::after {
@@ -89,6 +90,14 @@ nav.main {
                         bottom: 40%;
                         left: -10px;
                         transform: translateY(-50%);
+                     }
+                  }
+               }
+
+               @media (prefers-color-scheme: dark) {
+                  &.active {
+                     &::after {
+                        background: $white;
                      }
                   }
                }
