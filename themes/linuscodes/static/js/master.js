@@ -1,5 +1,12 @@
-window.onscroll = function() {
+// index new swup
+// const swup = new Swup({
+//    plugins: [
+//       new SwupSlideTheme(),
+//       new SwupPreloadPlugin()
+//    ]
+// });
 
+window.onscroll = function() {
    // add shadow to nav when page is scrolled
    if(window.pageYOffset > 0) {
       document.querySelector("nav.main").classList.add("has-shadow");
