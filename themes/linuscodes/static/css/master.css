@@ -189,7 +189,7 @@ body.small-sections section {
    .text-layout .item .wrapper.is-sticky {
       position: sticky;
       position: -webkit-sticky;
-      top: 90px;
+      top: 100px;
    }
 }
 

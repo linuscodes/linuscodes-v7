@@ -224,12 +224,10 @@ body.small-sections {
       }
 
       @media (min-width: 730px) {
-         .wrapper {
-            &.is-sticky {
-               position: sticky;
-               position: -webkit-sticky;
-               top: 90px;
-            }
+         .wrapper.is-sticky {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 100px;
          }
       }
    }
