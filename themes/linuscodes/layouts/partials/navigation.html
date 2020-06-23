@@ -11,7 +11,7 @@
          {{ range .Site.Menus.main }}
          {{ $topLevel := replace .URL "/" "" }}
          <li>
-            <a href="{{ .URL }}" class="{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq .Name "Blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}active{{ end }}">{{ .Name }}</a>
+            <a href="{{ .URL }}" class="{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq .Name "Blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}active{{ end }}" title="{{ .Name }}">{{ .Name }}</a>
          </li>
          {{ end}}
       </ul>
