@@ -54,6 +54,16 @@ a.link {
    color: #061BFF;
 }
 
+a.disabled {
+   opacity: .2;
+   color: #000000;
+   pointer-events: none;
+}
+
+a.disabled:hover {
+   color: #000000;
+}
+
 a:hover {
    color: #8F8F8F;
 }
@@ -166,6 +176,13 @@ body.small-sections section {
 
 .text-layout .item:nth-child(2) {
    width: 65%;
+}
+
+@media (min-width: 730px) {
+   .text-layout .item .wrapper.is-sticky {
+      position: sticky;
+      top: 90px;
+   }
 }
 
 @media screen and (max-width: 730px) {
@@ -830,15 +847,27 @@ footer.post .scroll-top .scroll-top-link {
    padding: 5px 15px;
    border-radius: 20px;
    color: #000000;
-   background: #F8F8F8;
+   background: #FFFFFF;
    border: 1px solid #f2f2f2;
    display: inline-block;
    font-size: 13px;
 }
 
+@media (prefers-color-scheme: dark) {
+   .project-content .category-tag-list .category-tag {
+      background: #1A1A1A;
+      color: #b3b3b3;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+   }
+}
+
 .project-content .category-tag-list .category-tag:not(:last-child) {
    margin-right: 5px;
    margin-bottom: 5px;
+}
+
+.uses .text-layout iframe {
+   margin-bottom: 30px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -90,6 +90,16 @@ a {
       color: $bluePrimary;
    }
 
+   &.disabled {
+      opacity: .2;
+      color: $black;
+      pointer-events: none;
+
+      &:hover {
+         color: $black;
+      }
+   }
+
    &:hover {
       color: $grayPrimary;
    }
@@ -202,9 +212,19 @@ body.small-sections {
       &:nth-child(1) {
          width: 35%;
          padding-right: 5%;
+
       }
       &:nth-child(2) {
          width: 65%;
+      }
+
+      @media (min-width: 730px) {
+         .wrapper {
+            &.is-sticky {
+               position: sticky;
+               top: 90px;
+            }
+         }
       }
    }
 
@@ -238,5 +258,6 @@ body.small-sections {
 
 @import "pages/playground";
 @import "pages/project-detail";
+@import "pages/uses";
 
 @import "darkmode";
