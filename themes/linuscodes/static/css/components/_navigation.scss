@@ -38,6 +38,11 @@ nav.main {
                margin-right: 30px;
             }
 
+            &:nth-child(2) {
+               pointer-events: none;
+               opacity: .2;
+            }
+
             &:nth-child(3) {
                margin-right: 40px;
 
@@ -150,6 +155,10 @@ nav.main {
                transform: translateY(-10px);
                transition: .4s ease;
 
+               &:nth-child(2) {
+                  opacity: 0;
+               }
+
                a {
                   font-size: 20px;
                }
@@ -171,6 +180,7 @@ nav.main {
                }
                &:nth-child(2) {
                   transition-delay: .35s;
+                  opacity: .2;
                }
                &:nth-child(3) {
                   transition-delay: .4s;

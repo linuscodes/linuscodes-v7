@@ -266,6 +266,11 @@ nav.main .page-links ul li:not(:last-child) {
    margin-right: 30px;
 }
 
+nav.main .page-links ul li:nth-child(2) {
+   pointer-events: none;
+   opacity: .2;
+}
+
 nav.main .page-links ul li:nth-child(3) {
    margin-right: 40px;
 }
@@ -368,6 +373,9 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
       transform: translateY(-10px);
       transition: .4s ease;
    }
+   nav.main .page-links ul li:nth-child(2) {
+      opacity: 0;
+   }
    nav.main .page-links ul li a {
       font-size: 20px;
    }
@@ -384,6 +392,7 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
    }
    nav.main.nav-opened .page-links ul li:nth-child(2) {
       transition-delay: .35s;
+      opacity: .2;
    }
    nav.main.nav-opened .page-links ul li:nth-child(3) {
       transition-delay: .4s;
