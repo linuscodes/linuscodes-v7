@@ -10,7 +10,7 @@ $grayDark: #1A1A1A;
 
 $bounceCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-$sans: 'inter';
+$sans: 'inter', sans-serif;
 $serif: 'p22-mackinac-pro';
 
 * {
@@ -20,7 +20,6 @@ $serif: 'p22-mackinac-pro';
    outline: none;
    appearance: none;
    -webkit-appearance: none;
-   font-display: swap;
    font-family: $sans;
 }
 
@@ -104,7 +103,7 @@ img {
    padding-left: 15%;
    padding-right: 15%;
 
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 840px) {
       padding-left: 5%;
       padding-right: 5%;
    }

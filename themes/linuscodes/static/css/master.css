@@ -5,8 +5,7 @@
    outline: none;
    appearance: none;
    -webkit-appearance: none;
-   font-display: swap;
-   font-family: "inter";
+   font-family: "inter", sans-serif;
 }
 
 .resize-animation-stopper * {
@@ -39,13 +38,13 @@ h3 {
 }
 
 p {
-   font: 16px/1.8 "inter";
+   font: 16px/1.8 "inter", sans-serif;
    color: #8F8F8F;
    margin-bottom: 15px;
 }
 
 a {
-   font: 16px "inter";
+   font: 16px "inter", sans-serif;
    color: #000000;
    text-decoration: none;
    transition: color .3s ease;
@@ -68,7 +67,7 @@ img {
    padding-right: 15%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
    .has-padding {
       padding-left: 5%;
       padding-right: 5%;
@@ -186,7 +185,7 @@ body.small-sections section {
    border: none;
    position: relative;
    border-radius: 10px;
-   font: 16px/1 "inter";
+   font: 16px/1 "inter", sans-serif;
    padding: 13px 30px 14px 30px;
    display: inline-flex;
    align-items: center;
@@ -459,7 +458,7 @@ header .header-layout .item .image-wrapper.has-shadow {
 }
 
 header span {
-   font-family: "inter";
+   font-family: "inter", sans-serif;
    display: block;
    text-transform: uppercase;
    color: #8F8F8F;
