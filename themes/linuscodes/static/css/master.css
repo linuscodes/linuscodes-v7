@@ -64,6 +64,15 @@ a.disabled:hover {
    color: #000000;
 }
 
+@media (prefers-color-scheme: dark) {
+   a.disabled {
+      color: #FFFFFF;
+   }
+   a.disabled:hover {
+      color: #FFFFFF;
+   }
+}
+
 a:hover {
    color: #8F8F8F;
 }
