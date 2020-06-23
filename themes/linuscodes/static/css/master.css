@@ -181,6 +181,7 @@ body.small-sections section {
 @media (min-width: 730px) {
    .text-layout .item .wrapper.is-sticky {
       position: sticky;
+      position: -webkit-sticky;
       top: 90px;
    }
 }

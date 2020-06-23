@@ -222,6 +222,7 @@ body.small-sections {
          .wrapper {
             &.is-sticky {
                position: sticky;
+               position: -webkit-sticky;
                top: 90px;
             }
          }
