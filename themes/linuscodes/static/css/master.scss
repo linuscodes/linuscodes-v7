@@ -67,6 +67,10 @@ h2 {
    &.is-bold {
       font-weight: 700;
    }
+
+   &.is-sans {
+      font-family: $sans;
+   }
 }
 
 h3 {
@@ -163,6 +167,14 @@ section {
       &.visible {
          transform: translateY(0);
          opacity: 1;
+      }
+   }
+
+   &.is-highlighted {
+      background: $graySecondary;
+
+      @media (prefers-color-scheme: dark) {
+         background: lighten($grayDark, 5%);
       }
    }
 }
@@ -267,6 +279,7 @@ body.small-sections {
 @import "components/header";
 @import "components/project-list";
 @import "components/footer";
+@import "components/project-pagination";
 
 @import "pages/playground";
 @import "pages/project-detail";

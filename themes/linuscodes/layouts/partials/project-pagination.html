@@ -1,0 +1,27 @@
+<div class="prev-next-navigation{{ if and (.PrevInSection) (.NextInSection) }} has-next-prev{{ end }}">
+   {{ if .PrevInSection }}
+   <div class="wrapper">
+      <a href="{{ .PrevInSection.Permalink }}">
+         <span>
+            Previous Project
+         </span>
+         <h2>
+            {{ .PrevInSection.Title }}
+         </h2>
+      </a>
+   </div>
+   {{ end }}
+
+   {{ if .NextInSection }}
+   <div class="wrapper">
+      <a href="{{ .NextInSection.Permalink }}">
+         <span>
+            Next Project
+         </span>
+         <h2>
+            {{ .NextInSection.Title }}
+         </h2>
+      </a>
+   </div>
+   {{ end }}
+</div>

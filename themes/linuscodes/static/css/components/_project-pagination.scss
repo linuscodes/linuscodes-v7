@@ -1,0 +1,49 @@
+// main: ../master.scss
+
+.prev-next-navigation {
+   display: flex;
+   flex-wrap: wrap;
+   min-height: 50vh;
+   height: 100%;
+
+   .wrapper {
+      width: 100%;
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         opacity: .5;
+      }
+
+      &:nth-child(1) {
+         background: darken($graySecondary, 5%);
+
+         @media (prefers-color-scheme: dark) {
+            background: lighten($grayDark, 2%);
+         }
+      }
+      &:nth-child(2) {
+         background: darken($graySecondary, 10%);
+
+         @media (prefers-color-scheme: dark) {
+            background: lighten($grayDark, 7%);
+         }
+      }
+   }
+
+   &.has-next-prev {
+      .wrapper {
+         width: 50%;
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+            justify-content: flex-start;
+            padding-left: 5%;
+         }
+      }
+   }
+}
