@@ -49,7 +49,11 @@
                   {{ end }}
                </a>
 
-               <a href="{{ .Permalink }}" class="btn primary">Read more</a>
+               {{ if not .Params.comingSoon }}
+                  <a href="{{ .Permalink }}" class="btn primary">Read more</a>
+               {{ else }}
+                  <a href="{{ .Permalink }}" class="btn disabled">Coming Soon</a>
+               {{ end }}
             </div>
          </li>
          {{ end }}
