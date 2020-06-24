@@ -256,8 +256,10 @@ body.small-sections section {
    background: #f3f3f3;
 }
 
-.btn.tertiary {
-   color: #8F8F8F;
+.btn.disabled {
+   color: #061BFF;
+   background: #ecedff;
+   opacity: 1;
 }
 
 nav.main {
@@ -887,6 +889,28 @@ footer.post .scroll-top .scroll-top-link {
 .project-content .category-tag-list .category-tag:not(:last-child) {
    margin-right: 5px;
    margin-bottom: 5px;
+}
+
+.project-content .project-detail-information-layout {
+   display: grid;
+   grid-template-columns: 20% 1fr;
+   gap: 5px 20px;
+   align-items: flex-end;
+}
+
+.project-content .project-detail-information-layout .detail-item h3 {
+   font-family: "inter", sans-serif;
+   line-height: 1.8;
+   font-size: 18px;
+}
+
+.project-content .project-detail-information-layout .detail-item p {
+   margin-bottom: 0;
+   font-weight: 300;
+}
+
+.project-content .project-detail-information-layout .detail-item.has-align-right {
+   justify-self: flex-end;
 }
 
 .uses .text-layout iframe {

@@ -41,7 +41,9 @@
       }
    }
 
-   &.tertiary {
-      color: $grayPrimary;
+   &.disabled {
+      color: $bluePrimary;
+      background: lighten($bluePrimary, 45%);
+      opacity: 1;
    }
 }
