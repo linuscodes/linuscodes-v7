@@ -27,27 +27,19 @@
       }
    }
 
-   .project-detail-information-layout {
-      display: grid;
-      grid-template-columns: 20% 1fr;
-      gap: 5px 20px;
-      align-items: flex-end;
+   .detail-item {
+      h3 {
+         font-family: $sans;
+         line-height: 1.8;
+         font-size: 18px;
+      }
 
-      .detail-item {
-         h3 {
-            font-family: $sans;
-            line-height: 1.8;
-            font-size: 18px;
-         }
+      p {
+         font-weight: 300;
+      }
 
-         p {
-            margin-bottom: 0;
-            font-weight: 300;
-         }
-
-         &.has-align-right {
-            justify-self: flex-end;
-         }
+      &.has-align-right {
+         justify-self: flex-end;
       }
    }
 }
