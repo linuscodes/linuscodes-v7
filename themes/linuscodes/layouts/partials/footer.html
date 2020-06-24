@@ -1,0 +1,53 @@
+<footer class="main has-padding">
+   <div class="branding">
+      <div class="logo-wrapper"></div>
+   </div>
+
+   <div class="social-media">
+      <h3>
+         Social Media
+      </h3>
+      <ul>
+         {{ with .Site.Params.Instagram }}
+            <li>
+               <a href="{{ . }}" target="_blank">Instagram</a>
+            </li>
+         {{ end }}
+         {{ with .Site.Params.Github }}
+            <li>
+               <a href="{{ . }}" target="_blank">Github</a>
+            </li>
+         {{ end }}
+         {{ with .Site.Params.Twitter }}
+            <li>
+               <a href="{{ . }}" target="_blank">Twitter</a>
+            </li>
+         {{ end }}
+         {{ with .Site.Params.Codepen }}
+            <li>
+               <a href="{{ . }}" target="_blank">CodePen</a>
+            </li>
+         {{ end }}
+      </ul>
+   </div>
+
+   <div class="about">
+      <h3>
+         Linus Rogge
+      </h3>
+      <p>
+         Linus is a 15 year old student from Hamburg, Germany who has experience in design and development for over 5 years.
+      </p>
+      <a href="{{ .Site.BaseURL }}about" class="btn secondary">Read more</a>
+   </div>
+</footer>
+
+<footer class="post has-padding">
+   <div class="copyright">
+      &copy;2020 <a href="https.//linuscodes.com/">Linus Rogge</a>
+   </div>
+
+   <div class="scroll-top">
+      <a class="scroll-top-link">Scroll top</a>
+   </div>
+</footer>
