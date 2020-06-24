@@ -37,7 +37,7 @@
          {{ range first 3 (sort $projects.Pages "Params.year" "desc" (where $projects.Pages "Params.type" "project")) }}
          <li>
             <div class="content">
-               <a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">
+               {{ if not .Params.comingSoon }}<a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">{{ end }}
                   <h2 class="project-list-title">
                      {{ .Title }}
                   </h2>
@@ -47,7 +47,7 @@
                         {{ . }}
                      </p>
                   {{ end }}
-               </a>
+               {{ if not .Params.comingSoon }}</a>{{ end }}
 
                {{ if not .Params.comingSoon }}
                   <a href="{{ .Permalink }}" class="btn primary">Read more</a>
