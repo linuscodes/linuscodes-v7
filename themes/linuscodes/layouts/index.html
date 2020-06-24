@@ -47,6 +47,12 @@
                         {{ . }}
                      </p>
                   {{ end }}
+
+                  {{ with .Params.liveLink }}
+                     <p>
+                        <a href="{{ . }}" target="_blank">View live site</a>
+                     </p>
+                  {{ end}}
                {{ if not .Params.comingSoon }}</a>{{ end }}
 
                {{ if not .Params.comingSoon }}
@@ -61,10 +67,10 @@
    </div>
 </section>
 
-<section class="has-padding writing">
+<!-- <section class="has-padding writing">
    <h1 class="scroll-into-view">
       Writing
    </h1>
-</section>
+</section> -->
 
 {{ end }}
