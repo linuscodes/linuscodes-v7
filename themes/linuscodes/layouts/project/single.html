@@ -23,8 +23,11 @@
       <div class="text-layout">
          <div class="item">
             <h2 class="is-bold">
-               About {{ .Title }}
+               Details
             </h2>
+            <p>
+               {{ .Description }}
+            </p>
 
             {{ if .Params.categories }}
                <div class="category-tag-list">
@@ -38,7 +41,46 @@
             {{ end }}
          </div>
          <div class="item">
+            <div class="project-detail-information-layout">
+               {{ with .Params.Year }}
+               <div class="detail-item has-align-right">
+                  <h3>
+                     Year
+                  </h3>
+               </div>
+               <div class="detail-item">
+                  <p>
+                     {{ . }}
+                  </p>
+               </div>
+               {{ end }}
 
+               {{ with .Params.Tools }}
+               <div class="detail-item has-align-right">
+                  <h3>
+                     Tools
+                  </h3>
+               </div>
+               <div class="detail-item">
+                  <p>
+                     {{ . }}
+                  </p>
+               </div>
+               {{ end }}
+
+               {{ with .Params.Year }}
+               <div class="detail-item has-align-right">
+                  <h3>
+                     Overview
+                  </h3>
+               </div>
+               <div class="detail-item">
+                  <p>
+                     {{ . }}
+                  </p>
+               </div>
+               {{ end }}
+            </div>
          </div>
       </div>
    </section>
