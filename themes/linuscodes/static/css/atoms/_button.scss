@@ -45,5 +45,12 @@
       color: $bluePrimary;
       background: lighten($bluePrimary, 45%);
       opacity: 1;
+
+      @media (prefers-color-scheme: dark) {
+         color: $white;
+         // background: darken($bluePrimary, 45%);
+         background: lighten($grayDark, 10%);
+         opacity: 1;
+      }
    }
 }

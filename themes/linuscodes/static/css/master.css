@@ -262,6 +262,14 @@ body.small-sections section {
    opacity: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+   .btn.disabled {
+      color: #FFFFFF;
+      background: #343434;
+      opacity: 1;
+   }
+}
+
 nav.main {
    width: 100%;
    height: 70px;
