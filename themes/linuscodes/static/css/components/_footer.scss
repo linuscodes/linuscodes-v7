@@ -3,8 +3,8 @@
 footer {
    &.main {
       // background: $graySecondary;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 100px;
+      padding-bottom: 100px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 50px;
