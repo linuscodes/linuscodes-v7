@@ -45,6 +45,12 @@
                         {{ . }}
                      </p>
                   {{ end }}
+
+                  {{ with .Params.liveLink }}
+                     <p>
+                        <a href="{{ . }}" target="_blank" class="is-external">Visit live site</a>
+                     </p>
+                  {{ end}}
                {{ if not .Params.comingSoon }}</a>{{ end }}
 
                {{ if not .Params.comingSoon }}
@@ -94,6 +100,12 @@
                         {{ . }}
                      </p>
                   {{ end }}
+
+                  {{ with .Params.liveLink }}
+                     <p>
+                        <a href="{{ . }}" target="_blank" class="is-external">Visit live site</a>
+                     </p>
+                  {{ end}}
                {{ if not .Params.comingSoon }}</a>{{ end }}
 
                {{ if not .Params.comingSoon }}
