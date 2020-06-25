@@ -802,7 +802,7 @@ header.intro p {
 
 @media screen and (max-width: 1100px) {
    .featured-project {
-      padding: 25px 25px 0 25px;
+      padding: 0 25px 0 25px;
       height: 100%;
       max-height: 80%;
    }
