@@ -17,16 +17,22 @@ dateFormat = "Monday, January 2, 2006"
    page = "/:filename/"
 
 [[menu.main]]
-   identifier = "projects"
-   name = "Projects"
-   url = "/projects/"
+   identifier = "home"
+   name = "Home"
+   url = "/"
    weight = 1
 
 [[menu.main]]
-   identifier = "playground"
-   name = "Playground"
-   url = "/playground/"
+   identifier = "projects"
+   name = "Projects"
+   url = "/projects/"
    weight = 2
+
+# [[menu.main]]
+#    identifier = "playground"
+#    name = "Playground"
+#    url = "/playground/"
+#    weight = 2
 
 [[menu.main]]
    identifier = "blog"
@@ -41,7 +47,7 @@ dateFormat = "Monday, January 2, 2006"
    weight = 4
 
 [[menu.main]]
-   identifier = "about"
-   name = "About"
-   url = "/about/"
+   identifier = "bio"
+   name = "Bio"
+   url = "/bio/"
    weight = 5
