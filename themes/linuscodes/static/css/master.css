@@ -307,6 +307,10 @@ body.nav-opened footer.main {
    color: #000000;
 }
 
+.btn.secondary:hover {
+   background: #f3f3f3;
+}
+
 @media (prefers-color-scheme: dark) {
    .btn.secondary {
       background: #272727;
@@ -315,10 +319,6 @@ body.nav-opened footer.main {
    .btn.secondary:hover {
       background: #222222;
    }
-}
-
-.btn.secondary:hover {
-   background: #f3f3f3;
 }
 
 .btn.disabled {
