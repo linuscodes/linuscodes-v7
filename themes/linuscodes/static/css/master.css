@@ -81,6 +81,37 @@ a:hover {
    color: #8F8F8F;
 }
 
+a.is-external {
+   position: relative;
+}
+
+a.is-external::after {
+   content: "";
+   background: url("/assets/icons/arrow-new-black.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 15.6px;
+   height: 12px;
+   position: absolute;
+   top: 50%;
+   display: inline-block;
+   margin-left: 10px;
+   transform: translateY(-45%) rotate(-45deg);
+   transition: opacity .3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+   a.is-external::after {
+      background: url("/assets/icons/arrow-new-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+a.is-external:hover::after {
+   opacity: .5;
+}
+
 img {
    max-width: 100%;
 }
