@@ -36,6 +36,15 @@
       background: $graySecondary;
       color: $black;
 
+      @media (prefers-color-scheme: dark) {
+         background: lighten($grayDark, 5%);
+         color: $white;
+
+         &:hover {
+            background: lighten($grayDark, 3%);
+         }
+      }
+
       &:hover {
          background: darken($graySecondary, 2%);
       }

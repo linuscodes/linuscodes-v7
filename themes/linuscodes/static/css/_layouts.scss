@@ -1,0 +1,73 @@
+// main: master.scss
+
+.text-layout {
+   display: flex;
+   flex-wrap: wrap;
+
+   .item {
+      h3 {
+         a {
+            color: $grayPrimary;
+
+            &:hover {
+               color: $black;
+
+               @media (prefers-color-scheme: dark) {
+                  color: $white;
+               }
+            }
+         }
+
+         &:not(:first-child) {
+            margin-top: 40px;
+         }
+      }
+
+      ul {
+         padding-left: 20px;
+         margin-top: 10px;
+
+         li {
+            margin-bottom: 5px;
+            color: lighten($black, 40%);
+         }
+      }
+
+      &:nth-child(1) {
+         width: 35%;
+         padding-right: 5%;
+
+      }
+      &:nth-child(2) {
+         width: 65%;
+      }
+
+      @media (min-width: 730px) {
+         .wrapper.is-sticky {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 100px;
+         }
+      }
+   }
+
+   @media screen and (max-width: 730px) {
+      .item {
+         &:first-child {
+            h2 {
+               margin-bottom: 3px;
+               font-weight: 900;
+            }
+
+            p {
+               margin-bottom: 35px;
+            }
+         }
+
+         &:nth-child(1),
+         &:nth-child(2) {
+            width: 100%;
+         }
+      }
+   }
+}

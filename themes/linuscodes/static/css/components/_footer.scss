@@ -57,6 +57,11 @@ footer {
       display: flex;
       justify-content: space-between;
 
+      @media (prefers-color-scheme: dark) {
+         background: lighten($grayDark, 5%);
+         color: $white;
+      }
+
       .scroll-top {
          .scroll-top-link {
             cursor: pointer;

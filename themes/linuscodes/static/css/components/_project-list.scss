@@ -50,6 +50,12 @@
             justify-content: space-between;
             height: 100%;
             padding: 25px;
+
+            @media (prefers-color-scheme: dark) {
+               background: $grayDark;
+               box-shadow: 0 0 30px 3px rgba($black, .1);
+               border: 1px solid rgba($white, .05);
+            }
          }
       }
    }
@@ -147,6 +153,20 @@
    &:hover {
       .image-wrapper {
          transform: translateY(40px);
+      }
+   }
+
+   @media (prefers-color-scheme: dark) {
+      background: $grayDark;
+      box-shadow: 0 0 30px 3px rgba($black, .1);
+      border: 1px solid rgba($white, .05);
+
+      .content {
+         .featured-tag {
+            background: $grayDark;
+            color: darken($white, 30%);
+            border: 1px solid rgba($white, .05);
+         }
       }
    }
 
