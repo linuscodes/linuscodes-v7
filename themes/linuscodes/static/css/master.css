@@ -650,7 +650,7 @@ header.intro p {
 }
 
 @media screen and (max-width: 1280px) {
-   .header-layout .item:nth-child(1) {
+   .has-header-layout header .header-layout .item:nth-child(1) {
       min-height: 40vh;
    }
 }
