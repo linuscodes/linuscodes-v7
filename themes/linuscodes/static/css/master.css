@@ -418,11 +418,6 @@ nav.main .mobile-btn {
    cursor: pointer;
 }
 
-nav.main .mobile-btn span {
-   margin-right: 10px;
-   transform: translateY(-3px);
-}
-
 nav.main .mobile-btn .bars .bar {
    width: 25px;
    height: 2px;
