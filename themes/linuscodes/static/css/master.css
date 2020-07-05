@@ -603,6 +603,21 @@ header.intro {
    min-height: calc(100vh - 70px);
 }
 
+header.intro h1 span {
+   display: inline-block;
+   margin-left: 10px;
+   animation: wave 1s ease 4;
+}
+
+@keyframes wave {
+   0%, 50%, 100% {
+      transform: rotate(0deg);
+   }
+   25%, 75% {
+      transform: rotate(20deg);
+   }
+}
+
 @media screen and (max-width: 768px) {
    header.intro {
       min-height: 80vh;
