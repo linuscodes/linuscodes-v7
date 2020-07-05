@@ -418,10 +418,24 @@ nav.main .mobile-btn {
    cursor: pointer;
 }
 
+nav.main .mobile-btn span {
+   margin-right: 10px;
+   transform: translateY(-3px);
+}
+
 nav.main .mobile-btn .bars .bar {
    width: 25px;
    height: 2px;
    background: #000;
+   transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav.main .mobile-btn .bars .bar:nth-child(1) {
+   transform-origin: 0 0;
+}
+
+nav.main .mobile-btn .bars .bar:nth-child(3) {
+   transform-origin: 0 0;
 }
 
 nav.main .mobile-btn .bars .bar:not(:last-child) {
@@ -477,6 +491,15 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
    }
    nav.main .page-links ul li a {
       font-size: 20px;
+   }
+   nav.main.nav-opened .mobile-btn .bars .bar:nth-child(1) {
+      transform: rotate(45deg) translate(-3px, -1px);
+   }
+   nav.main.nav-opened .mobile-btn .bars .bar:nth-child(2) {
+      opacity: 0;
+   }
+   nav.main.nav-opened .mobile-btn .bars .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(-2px, -1px);
    }
    nav.main.nav-opened .page-links {
       transform: translateY(-1px);
