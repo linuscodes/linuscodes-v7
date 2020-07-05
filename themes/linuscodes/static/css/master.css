@@ -942,6 +942,15 @@ footer.post .scroll-top .scroll-top-link {
    cursor: pointer;
 }
 
+@media screen and (max-width: 545px) {
+   footer.post {
+      flex-direction: column;
+   }
+   footer.post .scroll-top {
+      margin-top: 20px;
+   }
+}
+
 .prev-next-navigation {
    display: flex;
    flex-wrap: wrap;

@@ -67,5 +67,13 @@ footer {
             cursor: pointer;
          }
       }
+
+      @media screen and (max-width: 545px) {
+         flex-direction: column;
+
+         .scroll-top {
+            margin-top: 20px;
+         }
+      }
    }
 }
