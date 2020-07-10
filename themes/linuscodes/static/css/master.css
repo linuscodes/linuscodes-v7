@@ -382,15 +382,11 @@ nav.main .page-links ul li {
 nav.main .page-links ul li::before {
    display: inline-block;
    position: relative;
-   padding: 3px 7px 3px 23px;
+   padding: 3px 7px;
    border-radius: 5px;
    background: #f2f2f2;
    margin-right: 5px;
    font-size: 13px;
-   background-image: url("/assets/icons/alt-black.svg");
-   background-repeat: no-repeat;
-   background-size: 12px;
-   background-position: 7px 50%;
 }
 
 nav.main .page-links ul li:nth-of-type(1)::before {
@@ -416,10 +412,6 @@ nav.main .page-links ul li:nth-of-type(5)::before {
 nav.main .page-links ul li.active::before {
    background: #000000;
    color: #FFFFFF;
-   background-image: url("/assets/icons/alt-white.svg");
-   background-repeat: no-repeat;
-   background-size: 12px;
-   background-position: 7px 50%;
 }
 
 nav.main .page-links ul li:not(:last-child) {
