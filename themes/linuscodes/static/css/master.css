@@ -396,6 +396,13 @@ nav.main .page-links ul li::before {
    }
 }
 
+@media (prefers-color-scheme: dark) {
+   nav.main .page-links ul li::before {
+      background: #272727;
+      color: #FFFFFF;
+   }
+}
+
 nav.main .page-links ul li:nth-of-type(1)::before {
    content: "1";
 }
@@ -419,6 +426,13 @@ nav.main .page-links ul li:nth-of-type(5)::before {
 nav.main .page-links ul li.active::before {
    background: #000000;
    color: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+   nav.main .page-links ul li.active::before {
+      background: #FFFFFF;
+      color: #000000;
+   }
 }
 
 nav.main .page-links ul li:not(:last-child) {

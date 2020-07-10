@@ -47,6 +47,11 @@ nav.main {
                @media screen and (max-width: 660px) {
                   transform: translateY(-2px);
                }
+
+               @media (prefers-color-scheme: dark) {
+                  background: lighten($grayDark, 5%);
+                  color: $white;
+               }
             }
 
             @for $i from 1 through 5 {
@@ -61,6 +66,11 @@ nav.main {
                &::before {
                   background: $black;
                   color: $white;
+
+                  @media (prefers-color-scheme: dark) {
+                     background: $white;
+                     color: $black;
+                  }
                }
             }
 
