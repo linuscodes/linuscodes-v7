@@ -40,7 +40,7 @@
             z-index: 1;
             color: $black;
             transform: translateY(59px);
-            transition: transform .5s $bounceCubic;
+            transition: transform .3s ease;
          }
 
          &:hover {

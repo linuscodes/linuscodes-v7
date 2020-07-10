@@ -1084,7 +1084,7 @@ footer.post .scroll-top .scroll-top-link {
    z-index: 1;
    color: #000000;
    transform: translateY(59px);
-   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transition: transform .3s ease;
 }
 
 .playground-layout .item .image-wrapper:hover::after {
