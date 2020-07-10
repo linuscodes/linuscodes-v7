@@ -70,7 +70,25 @@ $('.scroll-top-link').on('click', function(e) {
    $('html, body').animate({ scrollTop: 0 }, 900, $.bez([0.770, 0, 0.175, 1]));
 });
 
+// init chocolat lightbox
 Chocolat(document.querySelectorAll('.chocolat-image'), {
    imageSize: 'contain',
    loop: true
-})
+});
+
+// add key navigation
+document.body.onkeypress = function(event) {
+   var key = event.which || event.keyCode;
+
+   if (key === 49) {
+      location.href = "/"
+   } else if (key === 50) {
+      location.href = "/projects"
+   } else if (key === 51) {
+      location.href = "https://blog.linuscodes.com"
+   } else if (key === 52) {
+      location.href = "/uses"
+   } else if (key === 53) {
+      location.href = "/bio"
+   }
+}

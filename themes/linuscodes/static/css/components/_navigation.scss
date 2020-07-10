@@ -34,6 +34,31 @@ nav.main {
          li {
             float: left;
 
+            &::before {
+               display: inline-block;
+               position: relative;
+               padding: 3px 7px;
+               border-radius: 5px;
+               background: darken($white, 5%);
+               margin-right: 5px;
+               font-size: 13px;
+            }
+
+            @for $i from 1 through 5 {
+               &:nth-of-type(#{$i}) {
+                  &::before {
+                     content: '#{$i}';
+                  }
+               }
+            }
+
+            &.active {
+               &::before {
+                  background: $black;
+                  color: $white;
+               }
+            }
+
             &:not(:last-child) {
                margin-right: 30px;
             }
@@ -49,33 +74,6 @@ nav.main {
             a {
                position: relative;
                display: inline-block;
-
-               &.active {
-                  &::after {
-                     content: "";
-                     position: absolute;
-                     left: 50%;
-                     bottom: -7px;
-                     width: 3px;
-                     height: 3px;
-                     background: $black;
-                     border-radius: 50%;
-
-                     @media screen and (max-width: 660px) {
-                        bottom: 40%;
-                        left: -10px;
-                        transform: translateY(-50%);
-                     }
-                  }
-               }
-
-               @media (prefers-color-scheme: dark) {
-                  &.active {
-                     &::after {
-                        background: $white;
-                     }
-                  }
-               }
             }
          }
       }

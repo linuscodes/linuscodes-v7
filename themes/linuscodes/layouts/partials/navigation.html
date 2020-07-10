@@ -10,8 +10,8 @@
          {{ $current := . }}
          {{ range .Site.Menus.main }}
          {{ $topLevel := replace .URL "/" "" }}
-         <li class="{{ if eq .Identifier "blog" }}has-external-link{{ end }}">
-            <a href="{{ .URL }}" class="{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq .Name "Blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}active{{ end }}{{ if eq .Identifier "blog" }} is-external{{ end }}" title="{{ .Name }}">{{ .Name }}</a>
+         <li class="{{ if eq .Identifier "blog" }}has-external-link{{ end }}{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq .Name "Blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}active{{ end }}">
+            <a href="{{ .URL }}" class="{{ if eq .Identifier "blog" }} is-external{{ end }}" title="{{ .Name }}">{{ .Name }}</a>
          </li>
          {{ end}}
       </ul>
