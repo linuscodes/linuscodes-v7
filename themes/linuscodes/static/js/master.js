@@ -80,15 +80,19 @@ Chocolat(document.querySelectorAll('.chocolat-image'), {
 document.body.onkeypress = function(event) {
    var key = event.which || event.keyCode;
 
-   if (key === 49) {
+   if (key === 161) {
       location.href = "/"
-   } else if (key === 50) {
+   }
+   if (key === 8220) {
       location.href = "/projects"
-   } else if (key === 51) {
+   }
+   if (key === 182) {
       location.href = "https://blog.linuscodes.com"
-   } else if (key === 52) {
+   }
+   if (key === 162) {
       location.href = "/uses"
-   } else if (key === 53) {
+   }
+   if (key === 91) {
       location.href = "/bio"
    }
 }
