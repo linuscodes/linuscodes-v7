@@ -43,6 +43,8 @@ nav.main {
                margin-right: 5px;
                font-size: 13px;
                transform: translateY(-1px);
+               width: 8px;
+               text-align: center;
 
                @media screen and (max-width: 660px) {
                   transform: translateY(-2px);
