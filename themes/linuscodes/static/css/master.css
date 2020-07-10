@@ -171,6 +171,10 @@ section.is-highlighted {
    }
 }
 
+section.is-centered {
+   text-align: center;
+}
+
 .has-padding {
    padding-left: 15%;
    padding-right: 15%;
