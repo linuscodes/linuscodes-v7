@@ -87,7 +87,7 @@ document.body.onkeypress = function(event) {
       location.href = "/projects"
    }
    if (key === 51) {
-      location.href = "https://blog.linuscodes.com"
+      window.open("https://blog.linuscodes.com", "_blank");
    }
    if (key === 52) {
       location.href = "/uses"
