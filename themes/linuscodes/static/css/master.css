@@ -387,6 +387,13 @@ nav.main .page-links ul li::before {
    background: #f2f2f2;
    margin-right: 5px;
    font-size: 13px;
+   transform: translateY(-1px);
+}
+
+@media screen and (max-width: 660px) {
+   nav.main .page-links ul li::before {
+      transform: translateY(-2px);
+   }
 }
 
 nav.main .page-links ul li:nth-of-type(1)::before {

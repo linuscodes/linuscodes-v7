@@ -42,6 +42,11 @@ nav.main {
                background: darken($white, 5%);
                margin-right: 5px;
                font-size: 13px;
+               transform: translateY(-1px);
+
+               @media screen and (max-width: 660px) {
+                  transform: translateY(-2px);
+               }
             }
 
             @for $i from 1 through 5 {
