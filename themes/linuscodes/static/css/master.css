@@ -207,6 +207,10 @@ body.nav-opened footer.main {
    transition-delay: 0s;
 }
 
+.chocolat-overlay {
+   background: #000000;
+}
+
 .text-layout {
    display: flex;
    flex-wrap: wrap;

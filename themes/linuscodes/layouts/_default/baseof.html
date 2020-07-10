@@ -18,6 +18,7 @@
 
       <link rel="stylesheet" href="https://use.typekit.net/sdu6ktg.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ .Site.BaseURL }}css/chocolat.css">
       <link rel="stylesheet" href="{{ .Site.BaseURL }}css/master.min.css">
    </head>
    <body {{ with .Params.bodyClass }}class="{{ . }}"{{end}}>
@@ -33,10 +34,8 @@
    {{ partial "footer.html" . }}
 
    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <!-- <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-   <script src="{{ .Site.BaseURL }}js/slide-theme/dist/SwupSlideTheme.min.js"></script>
-   <script src="{{ .Site.BaseURL }}js/preload-plugin/dist/SwupPreloadPlugin.js"></script> -->
    <script defer src="{{ .Site.BaseURL }}js/bez/src/jquery.bez.js"></script>
+   <script defer src="{{ .Site.BaseURL }}js/chocolat.js"></script>
    <script defer src="{{ .Site.BaseURL }}js/master.js"></script>
    </body>
 </html>

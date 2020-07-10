@@ -69,3 +69,8 @@ $('.scroll-top-link').on('click', function(e) {
 
    $('html, body').animate({ scrollTop: 0 }, 900, $.bez([0.770, 0, 0.175, 1]));
 });
+
+Chocolat(document.querySelectorAll('.chocolat-image'), {
+   imageSize: 'contain',
+   loop: true
+})

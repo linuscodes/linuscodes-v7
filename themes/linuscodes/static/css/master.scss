@@ -207,6 +207,10 @@ body.nav-opened {
    }
 }
 
+.chocolat-overlay {
+   background: $black;
+}
+
 @import "layouts";
 
 @import "atoms/button";
