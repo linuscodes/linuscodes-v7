@@ -94,6 +94,7 @@ header {
             display: inline-block;
             margin-left: 10px;
             animation: wave 1s ease 4;
+            transform-origin: 80% 80%;
 
             @keyframes wave {
                0%, 50%, 100% {
