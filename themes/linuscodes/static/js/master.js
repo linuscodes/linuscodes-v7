@@ -63,10 +63,10 @@ $('.scroll-top-link').on('click', function(e) {
 });
 
 // init chocolat lightbox
-Chocolat(document.querySelectorAll('.chocolat-image'), {
-   imageSize: 'contain',
-   loop: true
-});
+// Chocolat(document.querySelectorAll('.chocolat-image'), {
+//    imageSize: 'contain',
+//    loop: true
+// });
 
 // add key navigation
 document.body.onkeypress = function(event) {
