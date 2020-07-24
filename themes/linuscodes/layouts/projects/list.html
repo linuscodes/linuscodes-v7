@@ -13,63 +13,6 @@
    </div>
 </header>
 
-<section class="has-padding" id="featured">
-   <div class="text-layout">
-      <div class="item">
-         <h2 class="is-bold">
-            Featured Project
-         </h2>
-      </div>
-      <div class="item">
-         <p>
-            This was by far my favorite project to work on. Getting to know Niki, Björn and Henrik is such a pleasure. We are still on our way to find the right path, but we've already learned so much. And that's what it is all about.
-         </p>
-      </div>
-   </div>
-
-   {{ range first 1 (where .Site.Pages "Params.featured" "true") }}
-      <div class="featured-project">
-         <div class="content">
-            <div class="featured-tag">
-               Featured project
-            </div>
-
-            <div class="wrapper">
-               {{ if not .Params.comingSoon }}<a href="{{ .Permalink }}" class="project-link" title="Explore this project">{{ end }}
-                  <h2 class="project-list-title">
-                     {{ .Title }}
-                  </h2>
-
-                  {{ with .Description }}
-                     <p class="project-list-description">
-                        {{ . }}
-                     </p>
-                  {{ end }}
-
-                  {{ with .Params.liveLink }}
-                     <p>
-                        <a href="{{ . }}" target="_blank" class="is-external">Visit live site</a>
-                     </p>
-                  {{ end}}
-               {{ if not .Params.comingSoon }}</a>{{ end }}
-
-               {{ if not .Params.comingSoon }}
-                  <a href="{{ .Permalink }}" class="btn primary">Read more</a>
-               {{ else }}
-                  <a href="{{ .Permalink }}" class="btn disabled">Coming Soon</a>
-               {{ end }}
-            </div>
-         </div>
-
-         {{ with .Params.image }}
-         <div class="image-wrapper">
-            <img src="{{ . | absURL }}">
-         </div>
-         {{ end }}
-      </div>
-   {{ end }}
-</section>
-
 <section class="has-padding" id="overview">
    <div class="text-layout">
       <div class="item">

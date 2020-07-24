@@ -16,28 +16,32 @@
    </div>
 </header>
 
-<section class="has-padding work" id="work">
+<section class="has-padding" id="featured">
    <div class="text-layout">
       <div class="item">
-         <h1 class="scroll-into-view">
-            Projects
-         </h1>
+         <h2 class="is-bold">
+            Featured Project
+         </h2>
+         <p>
+            <a href="/projects">View all projects</a> to see what I do best
+         </p>
       </div>
-
       <div class="item">
          <p>
-            I had the pleasure to work on really neat projects with a lot of great people. <a href="{{ .Site.BaseURL }}projects">See all projects</a>
+            This was by far my favorite project to work on. Getting to know Niki, Björn and Henrik is such a pleasure. We are still on our way to find the right path, but we've already learned so much. And that's what it is all about.
          </p>
       </div>
    </div>
 
-   <div class="project-list scroll-into-view">
-      <ul>
-         {{ $projects := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-         {{ range first 3 (sort $projects.Pages "Params.year" "desc" (where $projects.Pages "Params.type" "project")) }}
-         <li>
-            <div class="content">
-               {{ if not .Params.comingSoon }}<a href="{{ .Permalink }}" itemprop="url" class="project-link" title="Explore this project">{{ end }}
+   {{ range first 1 (where .Site.Pages "Params.featured" "true") }}
+      <div class="featured-project">
+         <div class="content">
+            <div class="featured-tag">
+               Featured project
+            </div>
+
+            <div class="wrapper">
+               {{ if not .Params.comingSoon }}<a href="{{ .Permalink }}" class="project-link" title="Explore this project">{{ end }}
                   <h2 class="project-list-title">
                      {{ .Title }}
                   </h2>
@@ -48,23 +52,28 @@
                      </p>
                   {{ end }}
 
-                  {{ with .Params.liveLink }}
+                  <!-- {{ with .Params.liveLink }}
                      <p>
                         <a href="{{ . }}" target="_blank" class="is-external">Visit live site</a>
                      </p>
-                  {{ end}}
+                  {{ end}} -->
                {{ if not .Params.comingSoon }}</a>{{ end }}
 
-               {{ if not .Params.comingSoon }}
-                  <a href="{{ .Permalink }}" class="btn primary">Read more</a>
-               {{ else }}
+                  <a href="{{ .Params.liveLink }}" class="btn primary is-external" target="_blank">Visit live site</a>
+                  <!-- {{ if not .Params.comingSoon }} -->
+               <!-- {{ else }}
                   <a href="{{ .Permalink }}" class="btn disabled">Coming Soon</a>
-               {{ end }}
+               {{ end }} -->
             </div>
-         </li>
+         </div>
+
+         {{ with .Params.image }}
+         <div class="image-wrapper">
+            <img src="{{ . | absURL }}">
+         </div>
          {{ end }}
-      </ul>
-   </div>
+      </div>
+   {{ end }}
 </section>
 
 <!-- <section class="has-padding is-highlighted">
