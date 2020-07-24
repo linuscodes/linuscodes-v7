@@ -247,3 +247,10 @@ nav.main {
       transition-delay: 0s;
    }
 }
+
+body.onload-animation-stopper {
+   .overlay,
+   .page-links {
+      transition: none;
+   }
+}

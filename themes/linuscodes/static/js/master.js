@@ -1,6 +1,15 @@
 // add target="_blank" to blog link in navigation
+let onloadTimer;
 document.body.onload = function() {
    document.querySelector("nav.main li:nth-child(3) a").setAttribute('target', '_blank');
+
+   // disable animations and transitions on page load
+   document.body.classList.add("onload-animation-stopper");
+
+   clearTimeout(onloadTimer);
+   onloadTimer = setTimeout(() => {
+      document.body.classList.remove("onload-animation-stopper");
+   }, 500);
 }
 
 window.onscroll = function() {
