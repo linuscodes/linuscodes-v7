@@ -11,6 +11,7 @@ dateFormat = "Monday, January 2, 2006"
    mail = "moin@linuscodes.com"
    twitter = "https://twitter.com/linuscodes"
    codepen = "https://codepen.io/linuscodes"
+   youtube = "https://linuscodes.com/youtube"
 
 [Permalinks]
    project = "/project/:filename/"

@@ -26,6 +26,9 @@
          {{ with .Site.Params.Codepen }}
             <li>
                <a href="{{ . }}" target="_blank">CodePen</a>
+         {{ with .Site.Params.Youtube }}
+            <li>
+               <a href="{{ . }}" target="_blank" class="is-external">YouTube</a>
             </li>
          {{ end }}
       </ul>
