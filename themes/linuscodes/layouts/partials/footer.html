@@ -10,22 +10,24 @@
       <ul>
          {{ with .Site.Params.Instagram }}
             <li>
-               <a href="{{ . }}" target="_blank">Instagram</a>
+               <a href="{{ . }}" target="_blank" class="is-external">Instagram</a>
             </li>
          {{ end }}
          {{ with .Site.Params.Github }}
             <li>
-               <a href="{{ . }}" target="_blank">Github</a>
+               <a href="{{ . }}" target="_blank" class="is-external">Github</a>
             </li>
          {{ end }}
          {{ with .Site.Params.Twitter }}
             <li>
-               <a href="{{ . }}" target="_blank">Twitter</a>
+               <a href="{{ . }}" target="_blank" class="is-external">Twitter</a>
             </li>
          {{ end }}
          {{ with .Site.Params.Codepen }}
             <li>
-               <a href="{{ . }}" target="_blank">CodePen</a>
+               <a href="{{ . }}" target="_blank" class="is-external">CodePen</a>
+            </li>
+         {{ end }}
          {{ with .Site.Params.Youtube }}
             <li>
                <a href="{{ . }}" target="_blank" class="is-external">YouTube</a>
@@ -51,6 +53,6 @@
    </div>
 
    <div class="scroll-top">
-      <a class="scroll-top-link">Scroll top</a>
+      <a class="scroll-top-link is-scrolling-top">Scroll top</a>
    </div>
 </footer>

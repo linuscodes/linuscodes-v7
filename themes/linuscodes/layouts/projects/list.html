@@ -8,7 +8,7 @@
    </h1>
 
    <div class="button-group">
-      <a href="#featured" class="btn primary">Explore</a>
+      <a href="#overview" class="btn primary is-scrolling">Explore</a>
       <a href="mailto:moin@linuscods.com?subject=Start%20your%20project" class="btn secondary">Start your project</a>
    </div>
 </header>
@@ -44,17 +44,20 @@
                      </p>
                   {{ end }}
 
-                  {{ with .Params.liveLink }}
+                  <!-- {{ with .Params.liveLink }}
                      <p>
                         <a href="{{ . }}" target="_blank" class="is-external">Visit live site</a>
                      </p>
-                  {{ end}}
+                  {{ end}} -->
                {{ if not .Params.comingSoon }}</a>{{ end }}
 
                {{ if not .Params.comingSoon }}
                   <a href="{{ .Permalink }}" class="btn primary">Read more</a>
                {{ else }}
-                  <a href="{{ .Permalink }}" class="btn disabled">Coming Soon</a>
+                  {{ with .Params.liveLink }}
+                     <a href="{{ . }}" class="btn primary is-external" target="_blank">Visit live site</a>
+                  {{ end }}
+                  <!-- <a href="{{ .Permalink }}" class="btn disabled">Coming Soon</a> -->
                {{ end }}
             </div>
          </li>
