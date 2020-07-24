@@ -1,11 +1,3 @@
-// index new swup
-// const swup = new Swup({
-//    plugins: [
-//       new SwupSlideTheme(),
-//       new SwupPreloadPlugin()
-//    ]
-// });
-
 // add target="_blank" to blog link in navigation
 document.body.onload = function() {
    document.querySelector("nav.main li:nth-child(3) a").setAttribute('target', '_blank');
