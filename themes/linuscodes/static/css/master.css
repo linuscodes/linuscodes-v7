@@ -135,6 +135,46 @@ a.is-external:hover::after {
    opacity: .5;
 }
 
+a.is-external.inline {
+   margin-right: 20px;
+}
+
+a.is-external.inline::after {
+   margin-left: 5px;
+}
+
+a.is-scrolling-top {
+   position: relative;
+}
+
+a.is-scrolling-top::after {
+   content: "";
+   background: url("/assets/icons/arrow-new-black.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 16.6px;
+   height: 13px;
+   position: absolute;
+   top: 50%;
+   display: inline-block;
+   margin-left: 10px;
+   transform: translateY(-45%) rotate(-90deg);
+   transition: transform .3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+   a.is-scrolling-top::after {
+      background: url("/assets/icons/arrow-new-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+a.is-scrolling-top:hover::after {
+   opacity: 1;
+   transform: translateY(calc(-45% - 2px)) rotate(-90deg);
+}
+
 img {
    max-width: 100%;
 }
@@ -343,6 +383,74 @@ body.nav-opened footer.main {
    }
 }
 
+.btn.is-external {
+   position: relative;
+   padding-right: 60px;
+}
+
+.btn.is-external::after {
+   content: "";
+   background: url("/assets/icons/arrow-new-white.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 16.6px;
+   height: 13px;
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   display: inline-block;
+   margin-left: 10px;
+   transform: translateY(-45%) rotate(-45deg);
+   transition: transform .3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+   .btn.is-external::after {
+      background: url("/assets/icons/arrow-new-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+.btn.is-external:hover::after {
+   opacity: 1;
+   transform: translateX(3px) translateY(calc(-45% - 3px)) rotate(-45deg);
+}
+
+.btn.is-scrolling {
+   position: relative;
+   padding-right: 60px;
+}
+
+.btn.is-scrolling::after {
+   content: "";
+   background: url("/assets/icons/arrow-new-white.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 16.6px;
+   height: 13px;
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   display: inline-block;
+   margin-left: 10px;
+   transform: translateY(-45%) rotate(90deg);
+   transition: transform .3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+   .btn.is-scrolling::after {
+      background: url("/assets/icons/arrow-new-white.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+.btn.is-scrolling:hover::after {
+   opacity: 1;
+   transform: translateY(calc(-45% + 2px)) rotate(90deg);
+}
+
 nav.main {
    width: 100%;
    height: 70px;
@@ -508,6 +616,7 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
       position: fixed;
       width: 100%;
       height: 50vh;
+      min-height: 380px;
       top: 0;
       left: 0;
       padding: 150px 5% 20px 5%;
@@ -579,6 +688,11 @@ nav.main .mobile-btn .bars .bar:not(:last-child) {
    opacity: 1;
    pointer-events: all;
    transition-delay: 0s;
+}
+
+body.onload-animation-stopper .overlay,
+body.onload-animation-stopper .page-links {
+   transition: none;
 }
 
 header {

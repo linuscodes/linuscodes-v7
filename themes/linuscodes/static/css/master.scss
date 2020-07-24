@@ -132,6 +132,46 @@ a {
             opacity: .5;
          }
       }
+
+      &.inline {
+         margin-right: 20px;
+
+         &::after {
+            margin-left: 5px;
+         }
+      }
+   }
+
+   &.is-scrolling-top {
+      position: relative;
+
+      &::after {
+         content: "";
+         background: url("/assets/icons/arrow-new-black.svg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 16.6px;
+         height: 13px;
+         position: absolute;
+         top: 50%;
+         display: inline-block;
+         margin-left: 10px;
+         transform: translateY(-45%) rotate(-90deg);
+         transition: transform .3s ease;
+
+         @media (prefers-color-scheme: dark) {
+            background: url("/assets/icons/arrow-new-white.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+      }
+
+      &:hover {
+         &::after {
+            opacity: 1;
+            transform: translateY(calc(-45% - 2px)) rotate(-90deg);
+         }
+      }
    }
 }
 
