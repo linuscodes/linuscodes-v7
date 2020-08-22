@@ -22,12 +22,12 @@
    }
 
    &.primary {
-      background: $bluePrimary;
+      background: $primary;
       color: $white;
-      border-color: $bluePrimary;
+      border-color: $primary;
 
       &:hover {
-         background: darken($bluePrimary, 5%);
+         background: darken($primary, 2%);
          color: $white;
       }
    }
@@ -51,13 +51,13 @@
    }
 
    &.disabled {
-      color: $bluePrimary;
-      background: lighten($bluePrimary, 45%);
+      color: $primary;
+      background: lighten($primary, 45%);
       opacity: 1;
 
       @media (prefers-color-scheme: dark) {
          color: $white;
-         // background: darken($bluePrimary, 45%);
+         // background: darken($primary, 45%);
          background: lighten($grayDark, 10%);
          opacity: 1;
       }
