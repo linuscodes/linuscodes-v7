@@ -10,6 +10,10 @@ document.body.onload = function() {
    onloadTimer = setTimeout(() => {
       document.body.classList.remove("onload-animation-stopper");
    }, 500);
+
+   document.querySelectorAll(".floating-image").forEach(function(element) {
+      element.classList.add("visible")
+   })
 }
 
 window.onscroll = function() {

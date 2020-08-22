@@ -17,6 +17,8 @@ header {
       align-items: center;
 
       .item {
+         position: relative;
+         
          &:nth-child(1) {
             width: 45%;
          }
