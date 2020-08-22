@@ -256,24 +256,6 @@ body.nav-opened {
    background: $black;
 }
 
-.cursor-circle {
-   position: absolute;
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   border: 1px solid $black;
-   transform: translate(-50%, -50%) scale(0);
-   opacity: 0;
-   transition: transform .3s ease, opacity .3s ease, top .1s ease, left .1s ease;
-   pointer-events: none;
-
-   &.visible {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 1;
-      background: rgba($black, .05);
-   }
-}
-
 @import "layouts";
 
 @import "atoms/button";

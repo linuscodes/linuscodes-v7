@@ -97,17 +97,10 @@ document.body.onkeypress = function(event) {
    }
 }
 
-document.onmousemove = function(e) {
-   document.querySelector(".cursor-circle").style.left = e.pageX + "px";
-   document.querySelector(".cursor-circle").style.top = e.pageY + "px";
-};
-
-function showCursor() {
-   document.querySelector(".cursor-circle").classList.add("visible")
-}
-function hideCursor() {
-   document.querySelector(".cursor-circle").classList.remove("visible")
-}
+// document.onmousemove = function(e) {
+//    document.querySelector(".append-cursor").style.left = e.pageX + "px";
+//    document.querySelector(".append-cursor").style.top = e.pageY + "px";
+// };
 
 // init chocolat lightbox
 // Chocolat(document.querySelectorAll('.chocolat-image'), {
