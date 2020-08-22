@@ -8,7 +8,10 @@
 
       <link rel="stylesheet" href="https://use.typekit.net/sdu6ktg.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="{{ .Site.BaseURL }}css/master.min.css">
+      
+      {{ $options := (dict "targetPath" "master.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+      {{ $style := resources.Get "scss/master.scss" | resources.ToCSS $options }}
+      <link rel="stylesheet" href="{{ $style.Permalink }}" />
    </head>
    <body {{ with .Params.bodyClass }}class="{{ . }}"{{end}}>
 

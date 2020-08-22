@@ -1,0 +1,23 @@
+<div class="project-navigation">
+   {{ if .NextInSection }}
+      <a href="{{ .NextInSection.Permalink }}" class="wrapper scroll-into-view">
+         <span>
+            <b>Next</b>&nbsp;&nbsp;Project
+         </span>
+         <h2>
+            {{ .NextInSection.Title }}
+         </h2>
+      </a>
+   {{ else }}
+      {{ range last 1 .CurrentSection.Pages }}
+         <a href="{{ .Permalink }}" class="wrapper scroll-into-view">
+            <span>
+               <b>Next</b>&nbsp;&nbsp;Project
+            </span>
+            <h2>
+               {{ .Title }}
+            </h2>
+         </a>
+      {{ end }}
+   {{ end }}
+</div>

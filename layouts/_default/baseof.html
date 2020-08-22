@@ -17,25 +17,31 @@
       <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}assets/icons/apple-touch-icon.png}}">
 
       <link rel="stylesheet" href="https://use.typekit.net/sdu6ktg.css">
+      <link rel="stylesheet" href="https://use.typekit.net/fvi8ldz.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/chocolat.min.css"> -->
-      <link rel="stylesheet" href="{{ .Site.BaseURL }}css/master.min.css">
+      
+      {{ $options := (dict "targetPath" "master.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+      {{ $style := resources.Get "scss/master.scss" | resources.ToCSS $options }}
+      <link rel="stylesheet" href="{{ $style.Permalink }}" />
    </head>
    <body {{ with .Params.bodyClass }}class="{{ . }}"{{end}}>
 
-   {{ partial "navigation" . }}
+      <div class="cursor-circle"></div>
 
-   <div class="overlay"></div>
+      {{ partial "navigation" . }}
 
-   <main class="main-content">
-      {{ block "content" . }} {{ end }}
-   </main>
+      <div class="overlay"></div>
 
-   {{ partial "footer.html" . }}
+      <main class="main-content">
+         {{ block "content" . }} {{ end }}
+      </main>
 
-   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script defer src="{{ .Site.BaseURL }}js/bez/src/jquery.bez.js"></script>
-   <!-- <script defer src="{{ .Site.BaseURL }}js/chocolat.js"></script> -->
-   <script defer src="{{ .Site.BaseURL }}js/master.js"></script>
+      {{ partial "footer.html" . }}
+
+      <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script defer src="{{ .Site.BaseURL }}js/bez/src/jquery.bez.js"></script>
+      <!-- <script defer src="{{ .Site.BaseURL }}js/chocolat.js"></script> -->
+      <script defer src="{{ .Site.BaseURL }}js/master.js"></script>
    </body>
 </html>

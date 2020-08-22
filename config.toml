@@ -1,7 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Linus Rogge"
-theme = "linuscodes"
 dateFormat = "Monday, January 2, 2006"
 
 [Params]

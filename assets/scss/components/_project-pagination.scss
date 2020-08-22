@@ -1,0 +1,87 @@
+// main: ../master.scss
+
+.project-navigation {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   min-height: 60vh;
+   height: 100%;
+   background: darken($graySecondary, 5%);
+   
+   @media (prefers-color-scheme: dark) {
+      background: lighten($grayDark, 2%);
+   }
+   
+   .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      span {
+         font-weight: 100;
+         font-size: 14px;
+         letter-spacing: .5px;
+         color: $black;
+         opacity: 0;
+         transform: translateY(40px) scale(.5);
+         transition: transform .5s $cubic, opacity .5s $cubic;
+
+         @media (prefers-color-scheme: dark) {
+            color: $white;
+         }
+
+         b {
+            font-weight: 600;
+         }
+      }
+
+      h2 {
+         font-weight: bolder;
+         font-family: $sans;
+         font-size: 50px;
+         letter-spacing: 0px;
+         color: $black;
+         opacity: 0;
+         transform: translateY(40px) scale(.5);
+         transition: transform .5s $cubic .1s, opacity .5s $cubic .1s;
+
+         &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background: $black;
+            transition: .5s $cubic;
+            margin-left: auto;
+            
+            @media (prefers-color-scheme: dark) {
+               background: $white;
+            }
+         }
+
+         @media (prefers-color-scheme: dark) {
+            color: $white;
+         }
+      }
+
+      &:hover {
+         h2 {
+            &::after {
+               width: 100%;
+               margin-right: auto;
+               margin-left: unset;
+            }
+         }
+      }
+
+      &.visible {
+         span, h2 {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+         }
+      }
+   }
+}

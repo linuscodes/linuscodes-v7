@@ -1,6 +1,6 @@
-// add target="_blank" to blog link in navigation
 let onloadTimer;
 document.body.onload = function() {
+   // add target="_blank" to blog link in navigation
    document.querySelector("nav.main li:nth-child(3) a").setAttribute('target', '_blank');
 
    // disable animations and transitions on page load
@@ -47,6 +47,7 @@ document.querySelector('.mobile-btn').onclick = function() {
    document.querySelector('.overlay').classList.toggle('visible');
 }
 
+// close menu when clicking overlay
 document.querySelector('.overlay').onclick = function() {
    document.querySelector('nav.main').classList.remove('nav-opened');
    document.body.classList.remove('nav-opened');
@@ -71,12 +72,6 @@ $('.scroll-top-link').on('click', function(e) {
    $('html, body').animate({ scrollTop: 0 }, 900, $.bez([0.770, 0, 0.175, 1]));
 });
 
-// init chocolat lightbox
-// Chocolat(document.querySelectorAll('.chocolat-image'), {
-//    imageSize: 'contain',
-//    loop: true
-// });
-
 // add key navigation
 document.body.onkeypress = function(event) {
    var key = event.which || event.keyCode;
@@ -97,3 +92,21 @@ document.body.onkeypress = function(event) {
       location.href = "/bio"
    }
 }
+
+document.onmousemove = function(e) {
+   document.querySelector(".cursor-circle").style.left = e.pageX + "px";
+   document.querySelector(".cursor-circle").style.top = e.pageY + "px";
+};
+
+function showCursor() {
+   document.querySelector(".cursor-circle").classList.add("visible")
+}
+function hideCursor() {
+   document.querySelector(".cursor-circle").classList.remove("visible")
+}
+
+// init chocolat lightbox
+// Chocolat(document.querySelectorAll('.chocolat-image'), {
+//    imageSize: 'contain',
+//    loop: true
+// });
