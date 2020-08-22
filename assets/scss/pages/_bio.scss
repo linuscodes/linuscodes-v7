@@ -98,6 +98,15 @@ header {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: .5s $cubic;
+
+      @for $i from 0 through 15 {
+         &:nth-child(#{$i}) {
+            transition-delay: 50ms * $i;
+         }
+      }
       
       .icon {
          width: 60px;
@@ -117,6 +126,13 @@ header {
       h4 {
          margin-bottom: 0;
          font-weight: 500;
+      }
+   }
+
+   &.visible {
+      .stack-grid-item {
+         opacity: 1;
+         transform: translateY(0);
       }
    }
 }
