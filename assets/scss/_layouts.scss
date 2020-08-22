@@ -24,12 +24,24 @@
       }
 
       ul {
-         padding-left: 20px;
+         padding-left: 10px;
          margin-top: 10px;
+         list-style: none;
 
          li {
             margin-bottom: 5px;
-            color: lighten($black, 40%);
+            color: $grayPrimary;
+
+            &::before {
+               content: "";
+               width: 4px;
+               height: 4px;
+               background: $grayPrimary;
+               border-radius: 50%;
+               display: inline-block;
+               margin-right: 10px;
+               transform: translateY(calc(-50% - 1px));
+            }
          }
       }
 
@@ -56,7 +68,6 @@
          &:first-child {
             h2 {
                margin-bottom: 3px;
-               font-weight: 900;
             }
 
             p {
