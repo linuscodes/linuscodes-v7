@@ -74,7 +74,9 @@
 
             <ul>
                <li>
-                  <a href="{{ . }}" class="is-external" target="_blank">{{ . }}</a>
+                  <a href="{{ . }}" class="is-external" target="_blank">
+                     {{ replace . "https://" "" }}
+                  </a>
                </li>
             </ul>
          </div>
