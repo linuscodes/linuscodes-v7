@@ -891,7 +891,9 @@ footer.post {
           opacity: 1; }
         .project-content .detail-grid .detail-item ul li a:hover {
           color: #000000; }
-
+          @media (prefers-color-scheme: dark) {
+            .project-content .detail-grid .detail-item ul li a:hover {
+              color: #FFFFFF; } }
 .uses .text-layout iframe {
   margin-bottom: 30px; }
 
