@@ -67,115 +67,6 @@ p {
    margin-bottom: 20px;
 }
 
-// link styles
-a {
-   font: 16px $sans;
-   color: $black;
-   text-decoration: none;
-   transition: color .3s ease;
-
-   @media (prefers-color-scheme: dark) {
-      color: $white;
-   }
-
-   &.link {
-      color: $primary;
-   }
-
-   &.disabled {
-      opacity: .2;
-      color: $black;
-      pointer-events: none;
-
-      &:hover {
-         color: $black;
-      }
-
-      @media (prefers-color-scheme: dark) {
-         color: $white;
-
-         &:hover {
-            color: $white;
-         }
-      }
-   }
-
-   &:hover {
-      color: $grayPrimary;
-   }
-
-   &.is-external {
-      position: relative;
-
-      &::after {
-         content: "";
-         background: url("/assets/icons/arrow-new-black.svg");
-         background-repeat: no-repeat;
-         background-size: cover;
-         width: 15.6px;
-         height: 12px;
-         position: absolute;
-         top: 50%;
-         display: inline-block;
-         margin-left: 5px;
-         transform: translateY(-45%) rotate(-45deg);
-         transition: opacity .3s ease;
-
-         @media (prefers-color-scheme: dark) {
-            background: url("/assets/icons/arrow-new-white.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-         }
-      }
-
-      &:hover {
-         &::after {
-            opacity: .5;
-         }
-      }
-
-      &.inline {
-         margin-right: 20px;
-
-         &::after {
-            margin-left: 3px;
-         }
-      }
-   }
-
-   &.is-scrolling-top {
-      position: relative;
-
-      &::after {
-         content: "";
-         background: url("/assets/icons/arrow-new-black.svg");
-         background-repeat: no-repeat;
-         background-size: cover;
-         width: 16.6px;
-         height: 13px;
-         position: absolute;
-         top: 50%;
-         display: inline-block;
-         margin-left: 10px;
-         transform: translateY(-45%) rotate(-90deg);
-         transition: transform .3s ease;
-
-         @media (prefers-color-scheme: dark) {
-            background: url("/assets/icons/arrow-new-white.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-         }
-      }
-
-      &:hover {
-         &::after {
-            opacity: 1;
-            transform: translateY(calc(-45% - 2px)) rotate(-90deg);
-         }
-      }
-   }
-}
-
 // image max width
 img {
    max-width: 100%;
@@ -230,25 +121,10 @@ section {
    }
 }
 
-.main-content,
-.page-content,
-footer.main {
-   transition: transform 1s .2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
 // body classes
 body.small-sections {
    section {
       padding-bottom: 100px;
-   }
-}
-
-body.nav-opened {
-   .main-content,
-   .page-content,
-   footer.main {
-      transform: translateY(50vh);
-      transition-delay: 0s;
    }
 }
 
@@ -259,6 +135,7 @@ body.nav-opened {
 @import "layouts";
 
 @import "atoms/button";
+@import "atoms/link";
 
 @import "components/navigation";
 @import "components/header";

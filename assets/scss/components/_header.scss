@@ -21,7 +21,11 @@ header {
          
          &:nth-child(1) {
             width: 45%;
-            padding-right: 50px;
+            padding-right: 100px;
+
+            @media screen and (max-width: 460px) {
+               padding-right: 0;
+            }
          }
          &:nth-child(2) {
             width: 55%;
@@ -77,6 +81,7 @@ header {
       color: $grayPrimary;
       font-weight: 200;
       letter-spacing: .5px;
+      width: 100%;
    }
 
    .button-group {
@@ -99,6 +104,7 @@ header {
             margin-left: 10px;
             animation: wave 1s ease 4;
             transform-origin: 80% 80%;
+            width: auto;
 
             @keyframes wave {
                0%, 50%, 100% {

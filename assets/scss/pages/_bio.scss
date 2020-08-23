@@ -127,6 +127,13 @@ header {
          margin-bottom: 0;
          font-weight: 500;
       }
+
+      span {
+         display: block;
+         font-size: 13px;
+         color: $grayPrimary;
+         font-weight: 200;
+      }
    }
 
    &.visible {
