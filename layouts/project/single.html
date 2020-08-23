@@ -23,57 +23,67 @@
    </header>
 
    <section class="has-padding" id="information">
-      <div class="text-layout">
-         <div class="item">
-            <h2 class="is-bold">
-               Overview
-            </h2>
+      <div class="detail-grid">
+         {{ with $.Param "tools" }}
+         <div class="detail-item">
+            <h3>
+               Tools
+            </h3>
 
-            <!-- {{ if .Params.categories }}
-               <div class="category-tag-list">
-                  {{ $len := len .Params.categories }}
-                  {{ range $index, $tag := .Params.categories }}
-                     <a href="{{ "categories/" | absLangURL }}{{ $tag | urlize }}" class="category-tag">
-                        {{ . }}
-                     </a>
-                  {{ end }}
-               </div>
-            {{ end }} -->
-
-            {{ with .Params.Year }}
-            <div class="detail-item has-align-right">
-               <h3>
-                  Year
-               </h3>
-            </div>
-            <div class="detail-item">
-               <p>
-                  {{ . }}
-               </p>
-            </div>
-            {{ end }}
-
-            {{ with .Params.Tools }}
-            <div class="detail-item has-align-right">
-               <h3>
-                  Tools
-               </h3>
-            </div>
-            <div class="detail-item">
-               <p>
-                  {{ . }}
-               </p>
-            </div>
-            {{ end }}
+            <ul>
+               {{ range $.Param "tools" }}
+               <li>{{ . }}</li>
+               {{ end }}
+            </ul>
          </div>
-         <div class="item">
-            {{ with .Params.Overview }}{{ . }}{{ end }}
+         {{ end }}
+         
+         {{ with $.Param "services" }}
+         <div class="detail-item">
+            <h3>
+               Services
+            </h3>
+
+            <ul>
+               {{ range $.Param "services" }}
+               <li>{{ . }}</li>
+               {{ end }}
+            </ul>
          </div>
+         {{ end }}
+
+         {{ with $.Param "contributors" }}
+         <div class="detail-item">
+            <h3>
+               Contributors
+            </h3>
+
+            <ul>
+               {{ range $.Param "contributors" }}
+               <li>{{ . }}</li>
+               {{ end }}
+            </ul>
+         </div>
+         {{ end }}
+
+         {{ with .Params.liveLink }}
+         <div class="detail-item">
+            <h3>
+               See live
+            </h3>
+
+            <ul>
+               <li>
+                  <a href="{{ . }}" class="is-external" target="_blank">{{ . }}</a>
+               </li>
+            </ul>
+         </div>
+         {{ end }}
       </div>
    </section>
-
+   
    {{ .Content }}
-
+   
    {{ partial "project-pagination.html" . }}
 </div>
 {{ end }}
