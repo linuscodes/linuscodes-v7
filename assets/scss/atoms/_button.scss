@@ -40,6 +40,14 @@
          background: darken($graySecondary, 2%);
       }
 
+      &.is-external {
+         &::after {
+            background: url("/assets/icons/arrow-new-black.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+      }
+
       @media (prefers-color-scheme: dark) {
          background: lighten($grayDark, 5%);
          color: $white;
