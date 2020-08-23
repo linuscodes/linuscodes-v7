@@ -158,6 +158,10 @@ body.small-sections section {
     color: #000000; }
     .btn.secondary:hover {
       background: #f3f3f3; }
+    .btn.secondary.is-external::after {
+      background: url("/assets/icons/arrow-new-black.svg");
+      background-repeat: no-repeat;
+      background-size: cover; }
     @media (prefers-color-scheme: dark) {
       .btn.secondary {
         background: #272727;
@@ -308,7 +312,8 @@ nav.main {
   align-items: center;
   justify-content: space-between;
   transition: box-shadow .3s ease;
-  z-index: 5; }
+  z-index: 5;
+  user-select: none; }
   nav.main.has-shadow {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05); }
   nav.main .branding a {
