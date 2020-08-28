@@ -196,9 +196,9 @@ body.small-sections section {
       transition: transform .3s ease; }
       @media (prefers-color-scheme: dark) {
         .btn.is-external::after {
-          background: url("/assets/icons/arrow-new-white.svg");
-          background-repeat: no-repeat;
-          background-size: cover; } }
+          background: url("/assets/icons/arrow-new-white.svg") !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important; } }
     .btn.is-external:hover::after {
       opacity: 1;
       transform: translateX(3px) translateY(calc(-45% - 3px)) rotate(-45deg); }

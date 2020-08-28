@@ -91,9 +91,9 @@
          transition: transform .3s ease;
 
          @media (prefers-color-scheme: dark) {
-            background: url("/assets/icons/arrow-new-white.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: url("/assets/icons/arrow-new-white.svg") !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
          }
       }
 
