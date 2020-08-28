@@ -518,6 +518,16 @@ header {
     margin-top: 70px; }
     header .button-group .btn:not(:last-child) {
       margin-right: 5px; }
+    @media screen and (max-width: 395px) {
+      header .button-group {
+        width: 100%; }
+        header .button-group .btn {
+          width: 100%;
+          text-align: center;
+          display: block; }
+          header .button-group .btn:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 10px; } }
   header.intro {
     min-height: calc(100vh - 70px); }
     header.intro h1 {
