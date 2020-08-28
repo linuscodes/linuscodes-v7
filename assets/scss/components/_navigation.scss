@@ -21,6 +21,11 @@ nav.main {
    .home-link {
       z-index: 3;
       margin-right: auto;
+      display: none;
+
+      @media screen and (max-width: 660px) {
+         display: block;
+      }
 
       a {
          color: $black;
@@ -168,12 +173,8 @@ nav.main {
   }
 
    @media screen and (max-width: 660px) {
-      .branding,
       .mobile-btn {
          z-index: 3;
-      }
-
-      .mobile-btn {
          display: block;
       }
 

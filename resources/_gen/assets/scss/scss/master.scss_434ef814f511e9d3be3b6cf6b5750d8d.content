@@ -318,7 +318,11 @@ nav.main {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05); }
   nav.main .home-link {
     z-index: 3;
-    margin-right: auto; }
+    margin-right: auto;
+    display: none; }
+    @media screen and (max-width: 660px) {
+      nav.main .home-link {
+        display: block; } }
     nav.main .home-link a {
       color: #000000; }
       @media (prefers-color-scheme: dark) {
@@ -380,10 +384,8 @@ nav.main {
       nav.main .mobile-btn .bars .bar {
         background: #FFFFFF; } }
   @media screen and (max-width: 660px) {
-    nav.main .branding,
     nav.main .mobile-btn {
-      z-index: 3; }
-    nav.main .mobile-btn {
+      z-index: 3;
       display: block; }
     nav.main .page-links {
       position: fixed;
