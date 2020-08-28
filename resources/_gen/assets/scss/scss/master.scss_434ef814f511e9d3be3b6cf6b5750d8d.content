@@ -316,14 +316,20 @@ nav.main {
   user-select: none; }
   nav.main.has-shadow {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05); }
-  nav.main .branding a {
-    font-size: 25px;
-    font-weight: bold;
-    color: #000000; }
+  nav.main .home-link {
+    z-index: 3;
+    margin-right: auto; }
+    nav.main .home-link a {
+      color: #000000; }
+      @media (prefers-color-scheme: dark) {
+        nav.main .home-link a {
+          color: #FFFFFF; } }
   nav.main .contact {
     z-index: 3; }
     nav.main .contact a.btn {
       padding: 10px 13px; }
+  nav.main.has-home-link .contact {
+    margin-right: 20px; }
   nav.main .page-links {
     background: #FFFFFF; }
     nav.main .page-links ul {

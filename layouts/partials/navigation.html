@@ -1,9 +1,11 @@
-<nav class="main has-padding">
-   <!-- <div class="branding">
+<nav class="main has-padding{{ if not .IsHome }} has-home-link{{ end }}">
+   {{ if not .IsHome }}
+   <div class="home-link">
       <a href="{{ .Site.BaseURL }}">
-         Linus Rogge
+         Home
       </a>
-   </div> -->
+   </div>
+   {{ end }}
 
    <div class="page-links">
       <ul>
