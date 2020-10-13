@@ -12,10 +12,6 @@
    background: $white;
    transition: background .4s ease, transform .3s $bounceCubic;
 
-   &:hover {
-      transform: scale(0.98);
-   }
-
    &:active,
    &:focus {
       transform: scale(0.95);

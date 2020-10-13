@@ -1,0 +1,54 @@
+@import "/fonts/web/jetbrains-mono.css";
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $sans;
+   color: $black;
+
+   @media (prefers-color-scheme: dark) {
+      color: $white;
+   }
+}
+
+h1 {
+   font-size: 40px;
+   font-weight: 600;
+   margin-bottom: 15px;
+}
+
+h2 {
+   font: 500 30px/1.4 $sans;
+   margin-bottom: 10px;
+
+   &.is-bold {
+      font-weight: 700;
+   }
+
+   &.is-sans {
+      font-family: $sans;
+   }
+}
+
+h3 {
+   font-size: 22px;
+   font-weight: 600;
+}
+
+h4 {
+	font-family: $mono;
+}
+
+p {
+   font: 14px/1.8 $mono;
+   font-weight: 400;
+   color: $grayPrimary;
+	margin-bottom: 20px;
+	letter-spacing: .3px;
+}
+
+span {
+	font-family: $mono;
+
+	&.line-through {
+		text-decoration: line-through;
+	}
+}

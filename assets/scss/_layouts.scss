@@ -7,13 +7,14 @@
    .item {
       h3 {
          a {
-            color: $grayPrimary;
-
+            font-size: 22px;
+            font-weight: 600;
+            
             &:hover {
                color: $black;
 
                @media (prefers-color-scheme: dark) {
-                  color: $white;
+                  color: $grayPrimary;
                }
             }
          }
@@ -31,6 +32,9 @@
          li {
             margin-bottom: 5px;
             color: $grayPrimary;
+            font-family: $mono;
+            font-size: 13px;
+            letter-spacing: .5px;
 
             &::before {
                content: "";
@@ -67,7 +71,7 @@
       .item {
          &:first-child {
             h2 {
-               margin-bottom: 3px;
+               margin-bottom: 20px;
             }
 
             p {

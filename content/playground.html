@@ -1,18 +1,31 @@
 +++
 title = "Playground"
-bodyClass = "small-sections"
+bodyClass = "small-sections has-header-layout"
 +++
 
 <header class="has-padding">
-   <span>
-      Playground
-   </span>
-   <h1>
-      Personal work and experiments 👨🏻‍🔬
-   </h1>
+   <div class="header-layout">
+      <div class="item">
+         <span>
+            Playground
+         </span>
+         <h1>
+            Personal work and experiments 👨🏻‍🔬
+         </h1>
+
+         <div class="button-group">
+            <a href="#intro" class="btn primary is-scrolling">Explore</a>
+         </div>
+      </div>
+      <div class="item">
+         <div class="image-wrapper has-shadow">
+            <img src="/assets/playground.JPG" alt="">
+         </div>
+      </div>
+   </div>
 </header>
 
-<section class="has-padding">
+<section class="has-padding" id="intro">
    <div class="text-layout">
       <div class="item">
          <h2 class="is-bold">
@@ -21,42 +34,60 @@ bodyClass = "small-sections"
       </div>
       <div class="item">
          <p>
-            This page is rarely seen on portfolios, though it is really dope to see. I like to share the work and projects that happen under the hood and which I maybe wouldn't have published otherwise. So do not judge me for anything here. Just enjoy the collection of weird and neat ideas 💡
+            This page is rarely seen on portfolios, though I really enjoy looking through other peoples experiments. This is a place to share the work and projects that happen under the hood and those I wouldn't have published otherwise. So, don't judge me for anything here. Just enjoy the collection of ideas 💡
+         </p>
+         <p>
+            The Idea behind side-projects is to level up your skills and just enjoy building. Sometimes it's a library that you wanted to test or a little app that actually helps you to solve a problem in day-to-day life.
+         </p>
+         <p>
+            &copy; Linus Rogge. All rights reserved.
          </p>
       </div>
    </div>
 </section>
 
-<section>
+<section class="is-highlighted playground-wrapper">
    <div class="playground-layout col-2">
       <div class="item">
-         <div class="image-wrapper" data-title="Responsive slider">
+         <div class="image-wrapper is-external">
             <a href="https://codepen.io/linuscodes/pen/LYpONpb" title="Click to view on codepen" target="_blank">
-               <img src="/assets/playground/responsive-slider.png">
+               <img class="lazy" data-src="/assets/playground/responsive-slider.png">
             </a>
          </div>
       </div>
       <div class="item">
-         <div class="image-wrapper chocolat-parent" data-title="Homequarter">
-            <a class="chocolat-image" href="/assets/playground/homequarter.png">
-               <img src="/assets/playground/homequarter.png">
+         <div class="image-wrapper chocolat-parent">
+            <a class="chocolat-image" href="/assets/playground/old-ones-playlist-cover.png" title="'Old Ones' playlist cover">
+               <img class="lazy" data-src="/assets/playground/old-ones-playlist-cover.png">
             </a>
          </div>
       </div>
-      <!-- <div class="item">
-         <div class="image-wrapper chocolat-parent" data-title="Homequarter">
-            <a class="chocolat-image" href="/assets/playground/responsive-slider.png">
-               <img src="/assets/playground/responsive-slider.png">
+      <div class="item">
+         <div class="image-wrapper chocolat-parent">
+            <a class="chocolat-image" href="/assets/playground/hustle-mode-playlist-cover.png" title="'Hustle Mode' playlist cover">
+               <img class="lazy" data-src="/assets/playground/hustle-mode-playlist-cover.png">
             </a>
          </div>
-      </div> -->
+      </div>
    </div>
 
    <div class="playground-layout full-width chocolat-parent">
       <div class="item">
-         <a href="/assets/playground/kliemann-artwork.jpg" class="chocolat-image">
-            <img src="/assets/playground/kliemann-artwork.jpg" alt="">
-         </a>
+         <div class="image-wrapper">
+            <a href="/assets/playground/transport-display.png" class="chocolat-image" title="Pubilc transportation display">
+               <img class="lazy" data-src="/assets/playground/transport-display.png">
+            </a>
+         </div>
       </div>
    </div>
+
+   <!-- <div class="playground-layout col-2">
+      <div class="item">
+         <div class="image-wrapper chocolat-parten">
+            <a href="/assets/playground/october-2020-playlist-cover.jpg" class="chocolat-image" title="OCTOBER 2020 playlist cover">
+               <img data-src="/assets/playground/october-2020-playlist-cover.jpg" class="lazy">
+            </a>
+         </div>
+      </div>
+   </div> -->
 </section>

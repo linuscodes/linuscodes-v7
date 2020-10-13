@@ -126,8 +126,10 @@
          background: $graySecondary;
          border: 1px solid lighten($black, 95%);
          display: inline-block;
-         font-size: 13px;
+         font-size: 12px;
          margin-bottom: 100px;
+         font-family: $mono;
+         font-weight: lighter;
       }
 
       .project-list-description {

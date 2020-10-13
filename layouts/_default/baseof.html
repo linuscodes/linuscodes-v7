@@ -19,7 +19,6 @@
       <link rel="stylesheet" href="https://use.typekit.net/sdu6ktg.css">
       <link rel="stylesheet" href="https://use.typekit.net/fvi8ldz.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/chocolat.min.css"> -->
       
       {{ $style := resources.Get "scss/master.scss" | resources.ToCSS "master.css" }}
       <link rel="stylesheet" href="{{ $style.Permalink }}" />
@@ -30,15 +29,16 @@
 
       <div class="overlay"></div>
 
-      <main class="main-content">
+      <main id="swup" class="main-content swup-transition-fade">
          {{ block "content" . }} {{ end }}
       </main>
 
       {{ partial "footer.html" . }}
 
-      <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script defer src="{{ .Site.BaseURL }}js/bez/src/jquery.bez.js"></script>
-      <!-- <script defer src="{{ .Site.BaseURL }}js/chocolat.js"></script> -->
-      <script defer src="{{ .Site.BaseURL }}js/master.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+      <script src="{{ .Site.BaseURL }}js/bez/src/jquery.bez.js"></script>
+      <script src="{{ .Site.BaseURL }}js/chocolat.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+      <script src="{{ .Site.BaseURL }}js/master.js"></script>
    </body>
 </html>

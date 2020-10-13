@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fullscreen-white</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-2" transform="translate(-13.000000, -11.000000)" stroke="#FFFFFF">
+            <g id="fullscreen-white" transform="translate(14.078489, 12.000000)">
+                <line x1="13.7495261" y1="7.24028326" x2="1.25466141" y2="7.59855151" id="Path" transform="translate(7.502094, 7.419417) rotate(-43.357594) translate(-7.502094, -7.419417) "></line>
+                <polyline id="Path-2" transform="translate(11.306538, 3.773046) rotate(-45.000000) translate(-11.306538, -3.773046) " points="9.92151115 0 12.6915646 3.77304618 9.92151115 7.54609237"></polyline>
+                <polyline id="Path-2-Copy" transform="translate(4.068819, 10.773046) rotate(135.000000) translate(-4.068819, -10.773046) " points="2.68379275 7 5.45384625 10.7730462 2.68379275 14.5460924"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -22,15 +22,14 @@
       </div>
       <div class="item">
          <p>
-            Learning by doing is one of the approaches that works pretty well for me. For that matter I tried to build as much as I can. Either for great people or for myself. These so called side-projects can soon be found on my <a href="{{ .Site.BaseURL }}playground" class="disabled">playground</a>.
+            Learning by doing is one of the approaches that works pretty well for me. For that matter I tried to build as much as I can. Either for great people or for myself. These so called side-projects can soon be found on my <a href="{{ .Site.BaseURL }}playground" class="is-new">playground</a>
          </p>
       </div>
    </div>
 
    <div class="project-list scroll-into-view">
       <ul>
-         {{ $projects := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-         {{ range (sort $projects.Pages "Params.year" "desc" (where $projects.Pages "Params.type" "project")) }}
+         {{ range (sort .Pages "Params.year" "desc") }}
          <li>
             <div class="content">
                {{ if not .Params.comingSoon }}<a href="{{ .Permalink }}" class="project-link" title="Explore this project">{{ end }}

@@ -9,7 +9,6 @@
    outline: none;
    appearance: none;
    -webkit-appearance: none;
-   font-family: $sans;
 }
 
 body {
@@ -24,47 +23,6 @@ body {
 .resize-animation-stopper * {
   animation: none !important;
   transition: none !important;
-}
-
-// typography styles
-h1, h2, h3, h4, h5, h6 {
-   font-family: $sans;
-   color: $black;
-
-   @media (prefers-color-scheme: dark) {
-      color: $white;
-   }
-}
-
-h1 {
-   font-size: 40px;
-   font-weight: 600;
-   margin-bottom: 15px;
-}
-
-h2 {
-   font: 500 30px/1.4 $sans;
-   margin-bottom: 10px;
-
-   &.is-bold {
-      font-weight: 700;
-   }
-
-   &.is-sans {
-      font-family: $sans;
-   }
-}
-
-h3 {
-   font-size: 22px;
-   font-weight: 600;
-}
-
-p {
-   font: 16px/1.8 $sans;
-   font-weight: 300;
-   color: $grayPrimary;
-   margin-bottom: 20px;
 }
 
 // image max width
@@ -128,11 +86,40 @@ body.small-sections {
    }
 }
 
+@import "chocolat.min";
+
 .chocolat-overlay {
    background: $black;
 }
 
+.chocolat-wrapper {
+   .chocolat-close {
+      background: url("../assets/icons/cross-white.svg") 50% 50% no-repeat;
+      background-size: 30%;
+   }
+
+   .chocolat-left {
+      background: url("../assets/icons/arrow-new-white.svg") 50% 50% no-repeat;
+      transform: rotate(180deg);
+      background-size: 40%;
+   }
+
+   .chocolat-right {
+      background: url("../assets/icons/arrow-new-white.svg") 50% 50% no-repeat;
+      background-size: 40%;
+   }
+
+   .chocolat-fullscreen {
+      background: url("../assets/icons/fullscreen-white.svg") 50% 50% no-repeat;
+   }
+
+   .chocolat-set-title {
+      border-right: none;
+   }
+}
+
 @import "layouts";
+@import "typography";
 
 @import "atoms/button";
 @import "atoms/link";

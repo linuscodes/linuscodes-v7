@@ -4,7 +4,6 @@ title = "Linus Rogge"
 dateFormat = "Monday, January 2, 2006"
 
 [Params]
-   mainSections = ["project"]
    instagram = "https://instagram.com/linuscodes"
    github = "https://github.com/linuscodes"
    mail = "moin@linuscodes.com"
@@ -13,7 +12,7 @@ dateFormat = "Monday, January 2, 2006"
    youtube = "https://linuscodes.com/youtube"
 
 [Permalinks]
-   project = "/project/:filename/"
+   project = "projects/:filename/"
    page = "/:filename/"
 
 [[menu.main]]
@@ -28,17 +27,12 @@ dateFormat = "Monday, January 2, 2006"
    url = "/projects/"
    weight = 2
 
-# [[menu.main]]
-#    identifier = "playground"
-#    name = "Playground"
-#    url = "/playground/"
-#    weight = 2
-
 [[menu.main]]
-   identifier = "blog"
-   name = "Blog"
-   url = "https://blog.linuscodes.com"
+   identifier = "playground"
+   name = "Playground"
+   url = "/playground/"
    weight = 3
+
 
 [[menu.main]]
    identifier = "uses"
@@ -51,3 +45,9 @@ dateFormat = "Monday, January 2, 2006"
    name = "Bio"
    url = "/bio/"
    weight = 5
+
+[[menu.main]]
+   identifier = "blog"
+   name = "Blog"
+   url = "https://blog.linuscodes.com"
+   weight = 6

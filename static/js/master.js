@@ -1,7 +1,7 @@
 let onloadTimer;
 document.body.onload = function() {
    // add target="_blank" to blog link in navigation
-   document.querySelector("nav.main li:nth-child(3) a").setAttribute('target', '_blank');
+   document.querySelector("nav.main li:nth-child(6) a").setAttribute('target', '_blank');
 
    // disable animations and transitions on page load
    document.body.classList.add("onload-animation-stopper");
@@ -87,7 +87,7 @@ document.body.onkeypress = function(event) {
       location.href = "/projects"
    }
    if (key === 51) {
-      window.open("https://blog.linuscodes.com", "_blank");
+      location.href = "/playground"
    }
    if (key === 52) {
       location.href = "/uses"
@@ -95,15 +95,21 @@ document.body.onkeypress = function(event) {
    if (key === 53) {
       location.href = "/bio"
    }
+   if (key === 54) {
+      window.open("https://blog.linuscodes.com", "_blank");
+   }
 }
 
-// document.onmousemove = function(e) {
-//    document.querySelector(".append-cursor").style.left = e.pageX + "px";
-//    document.querySelector(".append-cursor").style.top = e.pageY + "px";
-// };
-
 // init chocolat lightbox
-// Chocolat(document.querySelectorAll('.chocolat-image'), {
-//    imageSize: 'contain',
-//    loop: true
-// });
+Chocolat(document.querySelectorAll('.chocolat-image'), {
+   imageSize: 'contain',
+   loop: true,
+   setTitle: function() { return 'Playground' },
+   description: function() {
+      const currentImage = document.querySelectorAll('.chocolat-image')[this.settings.currentImageIndex]
+      return currentImage.title
+   }
+});
+
+// init lazyLoad
+const lazyLoadInstance = new LazyLoad();
